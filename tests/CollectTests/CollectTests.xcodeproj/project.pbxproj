@@ -14,6 +14,9 @@
 		3703C2A61B1FA6100082B5C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A51B1FA6100082B5C6 /* Images.xcassets */; };
 		3703C2A91B1FA6100082B5C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A71B1FA6100082B5C6 /* LaunchScreen.xib */; };
 		3703C2B51B1FA6100082B5C6 /* CollectTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C2B41B1FA6100082B5C6 /* CollectTestsTests.m */; };
+		3703C2C81B1FAAA90082B5C6 /* libTealiumCollect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */; };
+		3703C2CD1B1FABAD0082B5C6 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */; };
+		3703C2D01B1FAE000082B5C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3703C2941B1FA6100082B5C6;
 			remoteInfo = CollectTests;
+		};
+		3703C2C31B1FA61F0082B5C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 370841751B1F6FAE0017A089;
+			remoteInfo = TealiumCollect;
+		};
+		3703C2C51B1FA61F0082B5C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 370841801B1F6FAE0017A089;
+			remoteInfo = TealiumCollectTests;
+		};
+		3703C2C91B1FAAB00082B5C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 370841741B1F6FAE0017A089;
+			remoteInfo = TealiumCollect;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +64,9 @@
 		3703C2AE1B1FA6100082B5C6 /* CollectTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3703C2B31B1FA6100082B5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3703C2B41B1FA6100082B5C6 /* CollectTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectTestsTests.m; sourceTree = "<group>"; };
+		3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TealiumCollect.xcodeproj; path = ../../../source/TealiumCollect/TealiumCollect.xcodeproj; sourceTree = "<group>"; };
+		3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3703C2D01B1FAE000082B5C6 /* SystemConfiguration.framework in Frameworks */,
+				3703C2CD1B1FABAD0082B5C6 /* TealiumUtilities.framework in Frameworks */,
+				3703C2C81B1FAAA90082B5C6 /* libTealiumCollect.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3703C2971B1FA6100082B5C6 /* CollectTests */,
+				3703C2CE1B1FABB30082B5C6 /* Frameworks */,
 				3703C2B11B1FA6100082B5C6 /* CollectTestsTests */,
 				3703C2961B1FA6100082B5C6 /* Products */,
 			);
@@ -81,6 +112,7 @@
 		3703C2971B1FA6100082B5C6 /* CollectTests */ = {
 			isa = PBXGroup;
 			children = (
+				3703C2C71B1FA6290082B5C6 /* Library */,
 				3703C29C1B1FA6100082B5C6 /* AppDelegate.h */,
 				3703C29D1B1FA6100082B5C6 /* AppDelegate.m */,
 				3703C29F1B1FA6100082B5C6 /* ViewController.h */,
@@ -119,6 +151,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3703C2BF1B1FA61F0082B5C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */,
+				3703C2C61B1FA61F0082B5C6 /* TealiumCollectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3703C2C71B1FA6290082B5C6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		3703C2CE1B1FABB30082B5C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */,
+				3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,6 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3703C2CA1B1FAAB00082B5C6 /* PBXTargetDependency */,
 			);
 			name = CollectTests;
 			productName = CollectTests;
@@ -186,6 +245,12 @@
 			mainGroup = 3703C28C1B1FA6100082B5C6;
 			productRefGroup = 3703C2961B1FA6100082B5C6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3703C2BF1B1FA61F0082B5C6 /* Products */;
+					ProjectRef = 3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3703C2941B1FA6100082B5C6 /* CollectTests */,
@@ -193,6 +258,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTealiumCollect.a;
+			remoteRef = 3703C2C31B1FA61F0082B5C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3703C2C61B1FA61F0082B5C6 /* TealiumCollectTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TealiumCollectTests.xctest;
+			remoteRef = 3703C2C51B1FA61F0082B5C6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3703C2931B1FA6100082B5C6 /* Resources */ = {
@@ -240,6 +322,11 @@
 			isa = PBXTargetDependency;
 			target = 3703C2941B1FA6100082B5C6 /* CollectTests */;
 			targetProxy = 3703C2AF1B1FA6100082B5C6 /* PBXContainerItemProxy */;
+		};
+		3703C2CA1B1FAAB00082B5C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TealiumCollect;
+			targetProxy = 3703C2C91B1FAAB00082B5C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -349,8 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+				);
 				INFOPLIST_FILE = CollectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +451,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+				);
 				INFOPLIST_FILE = CollectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
