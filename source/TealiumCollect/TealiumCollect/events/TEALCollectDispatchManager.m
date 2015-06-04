@@ -1,12 +1,12 @@
 //
-//  TEALAudienceStreamDispatchManager.m
-//  AudienceStream Library
+//  TEALCollectDispatchManager.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 2/17/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALAudienceStreamDispatchManager.h"
+#import "TEALCollectDispatchManager.h"
 
 #import "TEALNetworkHelpers.h"
 #import "TEALURLSessionManager.h"
@@ -23,7 +23,7 @@
 static NSString * const AudienceStream_DispatchQueueKey = @"com.tealium.audience_stream.dispatch_queue";
 static NSString * const AudienceStream_IOQueueKey = @"com.tealium.audience_stream.io_queue";
 
-@interface TEALAudienceStreamDispatchManager () <TEALDispatchManagerDelegate>
+@interface TEALCollectDispatchManager () <TEALDispatchManagerDelegate>
 
 @property (strong, nonatomic) TEALDispatchManager *dispatchManager;
 
@@ -31,17 +31,17 @@ static NSString * const AudienceStream_IOQueueKey = @"com.tealium.audience_strea
 
 @end
 
-@implementation TEALAudienceStreamDispatchManager
+@implementation TEALCollectDispatchManager
 
-+ (instancetype) dispatchManagerWithConfiguration:(id<TEALAudienceStreamDispatchManagerConfiguration>)configuration
-                                         delegate:(id<TEALAudienceStreamDispatchManagerDelegate>)delegate {
++ (instancetype) dispatchManagerWithConfiguration:(id<TEALCollectDispatchManagerConfiguration>)configuration
+                                         delegate:(id<TEALCollectDispatchManagerDelegate>)delegate {
     
-    return [[TEALAudienceStreamDispatchManager alloc] initWithConfiguration:configuration
+    return [[TEALCollectDispatchManager alloc] initWithConfiguration:configuration
                                                                    delegate:delegate];
 }
 
-- (instancetype) initWithConfiguration:(id<TEALAudienceStreamDispatchManagerConfiguration>)configuration
-                              delegate:(id<TEALAudienceStreamDispatchManagerDelegate>)delegate {
+- (instancetype) initWithConfiguration:(id<TEALCollectDispatchManagerConfiguration>)configuration
+                              delegate:(id<TEALCollectDispatchManagerDelegate>)delegate {
 
     self = [self init];
     

@@ -1,17 +1,17 @@
 //
 //  TEALAudienceStreamAPIHelpers.m
-//  ASTester
+//  Tealium Collect Library
 //
 //  Created by George Webster on 4/17/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALAudienceStreamAPIHelpers.h"
+#import "TEALCollectAPIHelpers.h"
 #import "TEALSettings.h"
-#import "TEALAudienceStreamDatasources.h"
+#import "TEALCollectDatasources.h"
 #import "TEALNetworkHelpers.h"
 
-@implementation TEALAudienceStreamAPIHelpers
+@implementation TEALCollectAPIHelpers
 
 + (NSURL *) profileURLFromSettings:(TEALSettings *)settings {
     
@@ -57,12 +57,12 @@
 
     NSMutableDictionary *params = [NSMutableDictionary new];
     
-    params[TEALAudienceStreamKey_Account]   = settings.account;
-    params[TEALAudienceStreamKey_Profile]   = settings.asProfile;
-    params[TEALAudienceStreamKey_VisitorID] = settings.visitorID;
+    params[TEALCollectKey_Account]   = settings.account;
+    params[TEALCollectKey_Profile]   = settings.asProfile;
+    params[TEALCollectKey_VisitorID] = settings.visitorID;
 
     if (settings.traceID) {
-        params[TEALAudienceStreamKey_TraceID] = settings.traceID;
+        params[TEALCollectKey_TraceID] = settings.traceID;
     }
     
     NSString *queryString = [TEALNetworkHelpers urlParamStringFromDictionary:params];

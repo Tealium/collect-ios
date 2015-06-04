@@ -8,7 +8,7 @@
 
 #import <TealiumCollect/TealiumCollect.h>
 #import <TealiumCollect/TEALSettingsStore.h>
-#import <TealiumCollect/TEALAudienceStreamDispatchManager.h>
+#import <TealiumCollect/TEALCollectDispatchManager.h>
 #import <TealiumCollect/TEALURLSessionManager.h>
 #import <TealiumCollect/TEALProfileStore.h>
 
@@ -17,7 +17,7 @@
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALOperationManager *operationManager;
 @property (strong, nonatomic) TEALProfileStore *profileStore;
-@property (strong, nonatomic) TEALAudienceStreamDispatchManager *dispatchManager;
+@property (strong, nonatomic) TEALCollectDispatchManager *dispatchManager;
 @property (strong, nonatomic) TEALURLSessionManager *urlSessionManager;
 
 @property (nonatomic) BOOL enabled;

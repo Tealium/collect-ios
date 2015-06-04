@@ -12,7 +12,7 @@
 #import "TEALOperationManager.h"
 #import "TEALURLSessionManager.h"
 #import "TEALCollectConfiguration.h"
-#import "TEALAudienceStreamDatasources.h"
+#import "TEALCollectDatasources.h"
 #import "TEALError.h"
 #import "TEALLogger.h"
 

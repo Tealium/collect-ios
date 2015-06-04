@@ -1,12 +1,12 @@
 //
-//  TEALAudienceStreamDatasources.m
-//  ASTester
+//  TEALCollectDatasources.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 4/17/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALAudienceStreamDatasources.h"
+#import "TEALCollectDatasources.h"
 
 #pragma mark - UDO / Datasource Keys
 
@@ -22,12 +22,12 @@ NSString const * TEALDatasourceKey_CallType         = @"callType";
 
 #pragma mark - AudienceStream API Keys
 
-NSString const * TEALAudienceStreamKey_Account      = @"tealium_account";
-NSString const * TEALAudienceStreamKey_Profile      = @"tealium_profile";
-NSString const * TEALAudienceStreamKey_Environment  = @"tealium_environment";
-NSString const * TEALAudienceStreamKey_VisitorID    = @"tealium_vid";
-NSString const * TEALAudienceStreamKey_TraceID      = @"tealium_trace_id";
+NSString const * TEALCollectKey_Account      = @"tealium_account";
+NSString const * TEALCollectKey_Profile      = @"tealium_profile";
+NSString const * TEALCollectKey_Environment  = @"tealium_environment";
+NSString const * TEALCollectKey_VisitorID    = @"tealium_vid";
+NSString const * TEALCollectKey_TraceID      = @"tealium_trace_id";
 
-@implementation TEALAudienceStreamDatasources
+@implementation TEALCollectDatasources
 
 @end

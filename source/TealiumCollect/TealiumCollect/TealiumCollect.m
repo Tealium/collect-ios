@@ -9,7 +9,7 @@
 #import "TealiumCollect.h"
 
 #import "TEALSettingsStore.h"
-#import "TEALAudienceStreamDispatchManager.h"
+#import "TEALCollectDispatchManager.h"
 
 //#import "TEALDatasourceManager.h"
 
@@ -19,7 +19,7 @@
 // Queue / Operation Managers
 
 #import "TEALOperationManager.h"
-#import "TEALAudienceStreamDispatchManager.h"
+#import "TEALCollectDispatchManager.h"
 
 // Networking
 
@@ -36,9 +36,9 @@
 
 // Datasources
 
-#import "TEALAudienceStreamDatasources.h"
+#import "TEALCollectDatasources.h"
 #import <TealiumUtilities/TEALDataSourceStore.h>
-#import "TEALDatasourceStore+TEALAudienceStreamAdditions.h"
+#import "TEALDatasourceStore+TealiumCollectAdditions.h"
 
 // Profile
 
@@ -46,12 +46,12 @@
 
 // API
 
-#import "TEALAudienceStreamAPIHelpers.h"
+#import "TEALCollectAPIHelpers.h"
 
-@interface TealiumCollect () <TEALSettingsStoreConfiguration, TEALAudienceStreamDispatchManagerDelegate, TEALAudienceStreamDispatchManagerConfiguration>
+@interface TealiumCollect () <TEALSettingsStoreConfiguration, TEALCollectDispatchManagerDelegate, TEALCollectDispatchManagerConfiguration>
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
-@property (strong, nonatomic) TEALAudienceStreamDispatchManager *dispatchManager;
+@property (strong, nonatomic) TEALCollectDispatchManager *dispatchManager;
 @property (strong, nonatomic) TEALProfileStore *profileStore;
 
 @property (strong, nonatomic) TEALDatasourceStore *datasourceStore;
@@ -102,7 +102,7 @@
         
         [_settingsStore unarchiveCurrentSettings];
         
-        _dispatchManager    = [TEALAudienceStreamDispatchManager dispatchManagerWithConfiguration:self
+        _dispatchManager    = [TEALCollectDispatchManager dispatchManagerWithConfiguration:self
                                                                                          delegate:self];
     }
     
@@ -159,8 +159,8 @@
 - (void) setupProfileStoreWithSettings:(TEALSettings *) settings {
     
     NSString *visitorID = settings.visitorID;
-    NSURL *profileURL = [TEALAudienceStreamAPIHelpers profileURLFromSettings:settings];
-    NSURL *definitionURL = [TEALAudienceStreamAPIHelpers profileDefinitionsURLFromSettings:settings];
+    NSURL *profileURL = [TEALCollectAPIHelpers profileURLFromSettings:settings];
+    NSURL *definitionURL = [TEALCollectAPIHelpers profileDefinitionsURLFromSettings:settings];
     
     self.profileStore= [[TEALProfileStore alloc] initWithURLSessionManager:self.urlSessionManager
                                                                 profileURL:profileURL
@@ -255,7 +255,7 @@
         return nil;
     }
     
-    return [TEALAudienceStreamAPIHelpers mobilePublishSettingsURLStringFromSettings:settings];
+    return [TEALCollectAPIHelpers mobilePublishSettingsURLStringFromSettings:settings];
 }
 
 - (NSDictionary *) mobilePublishSettingsURLParams {
@@ -348,7 +348,7 @@
     [self.dispatchManager archiveDispatchQueue];
 }
 
-- (void) dispatchManager:(TEALAudienceStreamDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
+- (void) dispatchManager:(TEALCollectDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
     
     if (self.settingsStore.currentSettings.logLevel >= TEALConnectLogLevelVerbose) {
         
@@ -378,7 +378,7 @@
     }];
 }
 
-#pragma mark - TEALAudienceStreamDispatchManagerDelegate methods
+#pragma mark - TEALCollectDispatchManagerDelegate methods
 
 - (BOOL) shouldAttemptDispatch {
     
@@ -393,7 +393,7 @@
     return shouldAttempt;
 }
 
-#pragma mark - TEALAudienceStreamDispatchManagerConfiguration methods
+#pragma mark - TEALCollectDispatchManagerConfiguration methods
 
 - (NSDictionary *) datasourcesForEventType:(TEALEventType)eventType {
     return [self.datasourceStore datasourcesForEventType:eventType];
@@ -403,7 +403,7 @@
     
     TEALSettings *settings = self.settingsStore.currentSettings;
     
-    return [TEALAudienceStreamAPIHelpers sendDataURLStringFromSettings:settings];
+    return [TEALCollectAPIHelpers sendDataURLStringFromSettings:settings];
 }
 
 - (NSUInteger) dispatchBatchSize {

@@ -1,12 +1,12 @@
 //
-//  TEALDatasourceStore+TEALAudienceStreamAdditions.m
-//  ASTester
+//  TEALDatasourceStore+TealiumCollectAdditions.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 4/15/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALDatasourceStore+TEALAudienceStreamAdditions.h"
+#import "TEALDatasourceStore+TealiumCollectAdditions.h"
 
 #import <UIKit/UIDevice.h>
 #import "TEALSystemHelpers.h"
@@ -17,7 +17,7 @@
 static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.audiencestream.datasources";
 
 
-@implementation TEALDatasourceStore (TEALAudienceStreamAdditions)
+@implementation TEALDatasourceStore (TealiumCollectAdditions)
 
 - (void) loadWithUUIDKey:(NSString *)key {
     
