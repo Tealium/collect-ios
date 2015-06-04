@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  CollectTests
+//  CollectAPISampler
 //
-//  Created by George Webster on 6/3/15.
+//  Created by George Webster on 6/4/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 

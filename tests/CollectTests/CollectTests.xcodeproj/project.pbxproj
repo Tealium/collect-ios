@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3703C29B1B1FA6100082B5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C29A1B1FA6100082B5C6 /* main.m */; };
 		3703C29E1B1FA6100082B5C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C29D1B1FA6100082B5C6 /* AppDelegate.m */; };
-		3703C2A11B1FA6100082B5C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C2A01B1FA6100082B5C6 /* ViewController.m */; };
 		3703C2A41B1FA6100082B5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A21B1FA6100082B5C6 /* Main.storyboard */; };
 		3703C2A61B1FA6100082B5C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A51B1FA6100082B5C6 /* Images.xcassets */; };
 		3703C2A91B1FA6100082B5C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A71B1FA6100082B5C6 /* LaunchScreen.xib */; };
@@ -17,6 +16,9 @@
 		3703C2C81B1FAAA90082B5C6 /* libTealiumCollect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */; };
 		3703C2CD1B1FABAD0082B5C6 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */; };
 		3703C2D01B1FAE000082B5C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */; };
+		3703C49C1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */; };
+		3703C49D1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */; };
+		3703C49F1B20E4610082B5C6 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,6 @@
 		3703C29A1B1FA6100082B5C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3703C29C1B1FA6100082B5C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3703C29D1B1FA6100082B5C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3703C29F1B1FA6100082B5C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3703C2A01B1FA6100082B5C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3703C2A31B1FA6100082B5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3703C2A51B1FA6100082B5C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3703C2A81B1FA6100082B5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -67,6 +67,8 @@
 		3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TealiumCollect.xcodeproj; path = ../../../source/TealiumCollect/TealiumCollect.xcodeproj; sourceTree = "<group>"; };
 		3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
 		3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3703C49A1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALCollectAPIMenuViewController.h; sourceTree = "<group>"; };
+		3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALCollectAPIMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3703C49F1B20E4610082B5C6 /* TealiumUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +118,8 @@
 				3703C2C71B1FA6290082B5C6 /* Library */,
 				3703C29C1B1FA6100082B5C6 /* AppDelegate.h */,
 				3703C29D1B1FA6100082B5C6 /* AppDelegate.m */,
-				3703C29F1B1FA6100082B5C6 /* ViewController.h */,
-				3703C2A01B1FA6100082B5C6 /* ViewController.m */,
+				3703C49A1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.h */,
+				3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */,
 				3703C2A21B1FA6100082B5C6 /* Main.storyboard */,
 				3703C2A51B1FA6100082B5C6 /* Images.xcassets */,
 				3703C2A71B1FA6100082B5C6 /* LaunchScreen.xib */,
@@ -301,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3703C2A11B1FA6100082B5C6 /* ViewController.m in Sources */,
+				3703C49C1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */,
 				3703C29E1B1FA6100082B5C6 /* AppDelegate.m in Sources */,
 				3703C29B1B1FA6100082B5C6 /* main.m in Sources */,
 			);
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3703C2B51B1FA6100082B5C6 /* CollectTestsTests.m in Sources */,
+				3703C49D1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +473,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -488,6 +493,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
 				);
 				INFOPLIST_FILE = CollectTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
