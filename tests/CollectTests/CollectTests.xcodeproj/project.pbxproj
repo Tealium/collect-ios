@@ -14,11 +14,14 @@
 		3703C2A91B1FA6100082B5C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3703C2A71B1FA6100082B5C6 /* LaunchScreen.xib */; };
 		3703C2B51B1FA6100082B5C6 /* CollectTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C2B41B1FA6100082B5C6 /* CollectTestsTests.m */; };
 		3703C2C81B1FAAA90082B5C6 /* libTealiumCollect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */; };
-		3703C2CD1B1FABAD0082B5C6 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */; };
 		3703C2D01B1FAE000082B5C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */; };
 		3703C49C1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */; };
 		3703C49D1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */; };
-		3703C49F1B20E4610082B5C6 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */; };
+		E7537B421B20FF08009896E7 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B411B20FF08009896E7 /* TealiumUtilities.framework */; };
+		E7537B431B20FF08009896E7 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B411B20FF08009896E7 /* TealiumUtilities.framework */; };
+		E7537B461B210059009896E7 /* TEALSettingsStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7537B451B210059009896E7 /* TEALSettingsStoreTests.m */; };
+		E7610B671B20F6B400F378C1 /* TealiumCollectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7610B661B20F6B400F378C1 /* TealiumCollectTests.m */; };
+		E7610B6A1B20FB5100F378C1 /* libTealiumCollect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3703C2C41B1FA61F0082B5C6 /* libTealiumCollect.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +68,13 @@
 		3703C2B31B1FA6100082B5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3703C2B41B1FA6100082B5C6 /* CollectTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectTestsTests.m; sourceTree = "<group>"; };
 		3703C2BE1B1FA61F0082B5C6 /* TealiumCollect.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TealiumCollect.xcodeproj; path = ../../../source/TealiumCollect/TealiumCollect.xcodeproj; sourceTree = "<group>"; };
-		3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
 		3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3703C49A1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALCollectAPIMenuViewController.h; sourceTree = "<group>"; };
 		3703C49B1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALCollectAPIMenuViewController.m; sourceTree = "<group>"; };
+		E7537B411B20FF08009896E7 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		E7537B451B210059009896E7 /* TEALSettingsStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALSettingsStoreTests.m; sourceTree = "<group>"; };
+		E7610B661B20F6B400F378C1 /* TealiumCollectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TealiumCollectTests.m; sourceTree = "<group>"; };
+		E7610B681B20F6F100F378C1 /* TealiumCollect+PrivateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TealiumCollect+PrivateHeader.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3703C2D01B1FAE000082B5C6 /* SystemConfiguration.framework in Frameworks */,
-				3703C2CD1B1FABAD0082B5C6 /* TealiumUtilities.framework in Frameworks */,
 				3703C2C81B1FAAA90082B5C6 /* libTealiumCollect.a in Frameworks */,
+				E7537B421B20FF08009896E7 /* TealiumUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3703C49F1B20E4610082B5C6 /* TealiumUtilities.framework in Frameworks */,
+				E7610B6A1B20FB5100F378C1 /* libTealiumCollect.a in Frameworks */,
+				E7537B431B20FF08009896E7 /* TealiumUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +149,9 @@
 			children = (
 				3703C2B41B1FA6100082B5C6 /* CollectTestsTests.m */,
 				3703C2B21B1FA6100082B5C6 /* Supporting Files */,
+				E7610B661B20F6B400F378C1 /* TealiumCollectTests.m */,
+				E7610B681B20F6F100F378C1 /* TealiumCollect+PrivateHeader.h */,
+				E7537B451B210059009896E7 /* TEALSettingsStoreTests.m */,
 			);
 			path = CollectTestsTests;
 			sourceTree = "<group>";
@@ -174,8 +184,8 @@
 		3703C2CE1B1FABB30082B5C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7537B411B20FF08009896E7 /* TealiumUtilities.framework */,
 				3703C2CF1B1FAE000082B5C6 /* SystemConfiguration.framework */,
-				3703C2CC1B1FABAD0082B5C6 /* TealiumUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -316,6 +326,8 @@
 			files = (
 				3703C2B51B1FA6100082B5C6 /* CollectTestsTests.m in Sources */,
 				3703C49D1B20E1220082B5C6 /* TEALCollectAPIMenuViewController.m in Sources */,
+				E7537B461B210059009896E7 /* TEALSettingsStoreTests.m in Sources */,
+				E7610B671B20F6B400F378C1 /* TealiumCollectTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +455,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
 				);
 				INFOPLIST_FILE = CollectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -458,6 +471,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
 				);
 				INFOPLIST_FILE = CollectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,6 +488,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -481,6 +496,12 @@
 				);
 				INFOPLIST_FILE = CollectTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectTests.app/CollectTests";
 			};
@@ -494,9 +515,16 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
 				);
 				INFOPLIST_FILE = CollectTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectTests.app/CollectTests";
 			};
@@ -521,6 +549,7 @@
 				3703C2BA1B1FA6100082B5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3703C2BB1B1FA6100082B5C6 /* Build configuration list for PBXNativeTarget "CollectTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +558,7 @@
 				3703C2BD1B1FA6100082B5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
