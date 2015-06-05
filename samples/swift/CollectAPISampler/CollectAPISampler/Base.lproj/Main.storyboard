@@ -7,7 +7,7 @@
         <!--API Sampler-->
         <scene sceneID="o8b-tb-47L">
             <objects>
-                <tableViewController title="API Sampler" id="fGP-Bn-aIG" customClass="CollectAPIMenuViewController" sceneMemberID="viewController">
+                <tableViewController title="API Sampler" id="fGP-Bn-aIG" customClass="CollectAPIMenuViewController" customModule="CollectAPISampler" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VE2-kd-GYa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
