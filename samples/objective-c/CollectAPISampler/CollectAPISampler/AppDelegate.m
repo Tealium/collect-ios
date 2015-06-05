@@ -22,7 +22,7 @@
                                                                                   profile:@"demo"
                                                                               environment:@"dev"];
     
-    config.logLevel = TEALConnectLogLevelVerbose;
+    config.logLevel = TEALCollectLogLevelVerbose;
 
     // If you only want profile enrichment on request.
     // By default the visitor profile is polled each Send Event/View.

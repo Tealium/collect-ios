@@ -15,11 +15,11 @@ typedef NS_ENUM(NSUInteger, TEALProfilePollingFrequency) {
     TEALProfilePollingFrequencyAfterEveryEvent
 };
 
-typedef NS_ENUM(NSUInteger, TEALConnectLogLevel) {
-    TEALConnectLogLevelNone = 1,
-    TEALConnectLogLevelNormal,
-    TEALConnectLogLevelVerbose,
-    TEALConnectLogLevelExtremeVerbosity
+typedef NS_ENUM(NSUInteger, TEALCollectLogLevel) {
+    TEALCollectLogLevelNone = 1,
+    TEALCollectLogLevelNormal,
+    TEALCollectLogLevelVerbose,
+    TEALCollectLogLevelExtremeVerbosity
 };
 
 
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, TEALConnectLogLevel) {
 
 @property (nonatomic) BOOL useHTTP;
 @property (nonatomic) TEALProfilePollingFrequency pollingFrequency;
-@property (nonatomic) TEALConnectLogLevel logLevel;
+@property (nonatomic) TEALCollectLogLevel logLevel;
 
 @property (copy, nonatomic) NSString *audienceStreamProfile;
 

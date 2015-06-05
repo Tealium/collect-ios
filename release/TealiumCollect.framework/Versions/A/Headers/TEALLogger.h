@@ -10,15 +10,15 @@
 
 #import "TEALCollectConfiguration.h"
 
-#define TEAL_LogNormal(s,...) [TEALLogger logTargetLevel:TEALConnectLogLevelNormal message:(s),##__VA_ARGS__];
-#define TEAL_LogVerbose(s,...) [TEALLogger logTargetLevel:TEALConnectLogLevelVerbose message:(s),##__VA_ARGS__];
-#define TEAL_LogExtreamVerbosity(s,...) [TEALLogger logTargetLevel:TEALConnectLogLevelExtremeVerbosity message:(s),##__VA_ARGS__];
+#define TEAL_LogNormal(s,...) [TEALLogger logTargetLevel:TEALCollectLogLevelNormal message:(s),##__VA_ARGS__];
+#define TEAL_LogVerbose(s,...) [TEALLogger logTargetLevel:TEALCollectLogLevelVerbose message:(s),##__VA_ARGS__];
+#define TEAL_LogExtreamVerbosity(s,...) [TEALLogger logTargetLevel:TEALCollectLogLevelExtremeVerbosity message:(s),##__VA_ARGS__];
 
 
 @interface TEALLogger : NSObject
 
-+ (void) setLogLevel:(TEALConnectLogLevel)logLevel;
++ (void) setLogLevel:(TEALCollectLogLevel)logLevel;
 
-+ (void) logTargetLevel:(TEALConnectLogLevel)targetLevel message:(NSString *)format, ...;
++ (void) logTargetLevel:(TEALCollectLogLevel)targetLevel message:(NSString *)format, ...;
 
 @end

@@ -22,7 +22,7 @@
                                                                                   profile:@"demo"
                                                                               environment:@"dev"];
     
-    config.logLevel = TEALConnectLogLevelExtremeVerbosity;
+    config.logLevel = TEALCollectLogLevelExtremeVerbosity;
     config.pollingFrequency = TEALProfilePollingFrequencyOnRequest;
     
     [TealiumCollect enableWithConfiguration:config];

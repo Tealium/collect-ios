@@ -350,7 +350,7 @@
 
 - (void) dispatchManager:(TEALCollectDispatchManager *)dispatchManager didProcessDispatch:(TEALDispatch *)dispatch status:(TEALDispatchStatus)status {
     
-    if (self.settingsStore.currentSettings.logLevel >= TEALConnectLogLevelVerbose) {
+    if (self.settingsStore.currentSettings.logLevel >= TEALCollectLogLevelVerbose) {
         
         NSString *statusString = @"sent";
         

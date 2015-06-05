@@ -8,29 +8,29 @@
 
 #import "TEALLogger.h"
 
-static TEALConnectLogLevel _audienceStreamLogLevel;
+static TEALCollectLogLevel _audienceStreamLogLevel;
 
 @implementation TEALLogger
 
-+ (void) setLogLevel:(TEALConnectLogLevel)logLevel {
++ (void) setLogLevel:(TEALCollectLogLevel)logLevel {
 
     _audienceStreamLogLevel = logLevel;
 }
 
-+ (void) logTargetLevel:(TEALConnectLogLevel)targetLevel message:(NSString *)format, ... {
++ (void) logTargetLevel:(TEALCollectLogLevel)targetLevel message:(NSString *)format, ... {
 
     BOOL shouldLog = NO;
     switch (targetLevel) {
-        case TEALConnectLogLevelNormal:
-            shouldLog = (_audienceStreamLogLevel >= TEALConnectLogLevelNormal);
+        case TEALCollectLogLevelNormal:
+            shouldLog = (_audienceStreamLogLevel >= TEALCollectLogLevelNormal);
             break;
-        case TEALConnectLogLevelVerbose:
-            shouldLog = (_audienceStreamLogLevel >= TEALConnectLogLevelVerbose);
+        case TEALCollectLogLevelVerbose:
+            shouldLog = (_audienceStreamLogLevel >= TEALCollectLogLevelVerbose);
             break;
-        case TEALConnectLogLevelExtremeVerbosity:
-            shouldLog = (_audienceStreamLogLevel >= TEALConnectLogLevelExtremeVerbosity);
+        case TEALCollectLogLevelExtremeVerbosity:
+            shouldLog = (_audienceStreamLogLevel >= TEALCollectLogLevelExtremeVerbosity);
             break;
-        case TEALConnectLogLevelNone:
+        case TEALCollectLogLevelNone:
             shouldLog = NO;
             break;
     }

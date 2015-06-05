@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let configuration = TEALCollectConfiguration(account: "tealiummobile", profile: "demo", environment: "dev")
         
-        configuration.logLevel = TEALConnectLogLevel.Verbose
+        configuration.logLevel = TEALCollectLogLevel.Verbose
+        
+        // If you only want profile enrichment on request.
+        // By default the visitor profile is polled each Send Event/View.
+        // configuration.pollingFrequency = TEALProfilePollingFrequency.OnRequest;
         
         TealiumCollect.enableWithConfiguration(configuration)
         
