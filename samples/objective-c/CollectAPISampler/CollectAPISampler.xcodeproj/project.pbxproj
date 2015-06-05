@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		3703C4491B20DDEC0082B5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C4481B20DDEC0082B5C6 /* main.m */; };
 		3703C44C1B20DDEC0082B5C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C44B1B20DDEC0082B5C6 /* AppDelegate.m */; };
-		3703C44F1B20DDEC0082B5C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C44E1B20DDEC0082B5C6 /* ViewController.m */; };
 		3703C4521B20DDEC0082B5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3703C4501B20DDEC0082B5C6 /* Main.storyboard */; };
 		3703C4541B20DDEC0082B5C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3703C4531B20DDEC0082B5C6 /* Images.xcassets */; };
 		3703C4571B20DDEC0082B5C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3703C4551B20DDEC0082B5C6 /* LaunchScreen.xib */; };
 		3703C4631B20DDEC0082B5C6 /* CollectAPISamplerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3703C4621B20DDEC0082B5C6 /* CollectAPISamplerTests.m */; };
+		E7537B501B21186C009896E7 /* TEALCollectAPIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7537B4F1B21186C009896E7 /* TEALCollectAPIMenuViewController.m */; };
+		E7537B541B21189D009896E7 /* TealiumCollect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B521B21189D009896E7 /* TealiumCollect.framework */; };
+		E7537B551B21189D009896E7 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B531B21189D009896E7 /* TealiumUtilities.framework */; };
+		E7537B571B21193B009896E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B561B21193B009896E7 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,17 @@
 		3703C4481B20DDEC0082B5C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3703C44A1B20DDEC0082B5C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3703C44B1B20DDEC0082B5C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3703C44D1B20DDEC0082B5C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3703C44E1B20DDEC0082B5C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3703C4511B20DDEC0082B5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3703C4531B20DDEC0082B5C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3703C4561B20DDEC0082B5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3703C45C1B20DDEC0082B5C6 /* CollectAPISamplerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectAPISamplerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3703C4611B20DDEC0082B5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3703C4621B20DDEC0082B5C6 /* CollectAPISamplerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectAPISamplerTests.m; sourceTree = "<group>"; };
+		E7537B4E1B21186C009896E7 /* TEALCollectAPIMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALCollectAPIMenuViewController.h; sourceTree = "<group>"; };
+		E7537B4F1B21186C009896E7 /* TEALCollectAPIMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALCollectAPIMenuViewController.m; sourceTree = "<group>"; };
+		E7537B521B21189D009896E7 /* TealiumCollect.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumCollect.framework; path = ../../../release/TealiumCollect.framework; sourceTree = "<group>"; };
+		E7537B531B21189D009896E7 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		E7537B561B21193B009896E7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7537B571B21193B009896E7 /* SystemConfiguration.framework in Frameworks */,
+				E7537B541B21189D009896E7 /* TealiumCollect.framework in Frameworks */,
+				E7537B551B21189D009896E7 /* TealiumUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +72,9 @@
 		3703C43A1B20DDEB0082B5C6 = {
 			isa = PBXGroup;
 			children = (
+				E7537B561B21193B009896E7 /* SystemConfiguration.framework */,
 				3703C4451B20DDEC0082B5C6 /* CollectAPISampler */,
+				E7537B511B211888009896E7 /* Framework */,
 				3703C45F1B20DDEC0082B5C6 /* CollectAPISamplerTests */,
 				3703C4441B20DDEC0082B5C6 /* Products */,
 			);
@@ -83,8 +94,8 @@
 			children = (
 				3703C44A1B20DDEC0082B5C6 /* AppDelegate.h */,
 				3703C44B1B20DDEC0082B5C6 /* AppDelegate.m */,
-				3703C44D1B20DDEC0082B5C6 /* ViewController.h */,
-				3703C44E1B20DDEC0082B5C6 /* ViewController.m */,
+				E7537B4E1B21186C009896E7 /* TEALCollectAPIMenuViewController.h */,
+				E7537B4F1B21186C009896E7 /* TEALCollectAPIMenuViewController.m */,
 				3703C4501B20DDEC0082B5C6 /* Main.storyboard */,
 				3703C4531B20DDEC0082B5C6 /* Images.xcassets */,
 				3703C4551B20DDEC0082B5C6 /* LaunchScreen.xib */,
@@ -117,6 +128,15 @@
 				3703C4611B20DDEC0082B5C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7537B511B211888009896E7 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E7537B521B21189D009896E7 /* TealiumCollect.framework */,
+				E7537B531B21189D009896E7 /* TealiumUtilities.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3703C44F1B20DDEC0082B5C6 /* ViewController.m in Sources */,
+				E7537B501B21186C009896E7 /* TEALCollectAPIMenuViewController.m in Sources */,
 				3703C44C1B20DDEC0082B5C6 /* AppDelegate.m in Sources */,
 				3703C4491B20DDEC0082B5C6 /* main.m in Sources */,
 			);
@@ -349,8 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+				);
 				INFOPLIST_FILE = CollectAPISampler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+				);
 				INFOPLIST_FILE = CollectAPISampler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -418,6 +448,7 @@
 				3703C4681B20DDEC0082B5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3703C4691B20DDEC0082B5C6 /* Build configuration list for PBXNativeTarget "CollectAPISamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +457,7 @@
 				3703C46B1B20DDEC0082B5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

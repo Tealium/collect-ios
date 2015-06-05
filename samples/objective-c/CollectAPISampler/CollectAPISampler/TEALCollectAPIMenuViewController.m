@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.title = @"API Sampler";
 }
 
@@ -67,7 +67,7 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
             default:
                 break;
         }
-        
+
     }
     
     return cell;
@@ -113,7 +113,7 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
 - (void) fetchVisitorProfile {
     
     [TealiumCollect fetchVisitorProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
-        
+       
         if (error) {
             NSLog(@"test app failed to receive profile with error: %@", [error localizedDescription]);
         } else {
@@ -124,9 +124,9 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
 }
 
 - (void) accessLastLoadedVisitorProfile {
-    
+
     TEALVisitorProfile *profile = [TealiumCollect cachedVisitorProfileCopy];
-    
+
     if (profile) {
         NSLog(@"last loaded profile: %@", profile);
     } else {
