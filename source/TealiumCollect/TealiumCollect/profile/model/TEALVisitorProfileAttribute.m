@@ -1,28 +1,28 @@
 //
-//  TEALProfileAttribute.m
-//  TEALAudienceStream
+//  TEALVisitorProfileAttribute.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 2/4/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALProfileAttribute.h"
+#import "TEALVisitorProfileAttribute.h"
 #import <TealiumUtilities/NSString+TealiumAdditions.h>
 
-@interface TEALProfileAttribute()
+@interface TEALVisitorProfileAttribute()
 
-@property TEALProfileAttributeType type;
+@property TEALVisitorProfileAttributeType type;
 
 @end
 
-@implementation TEALProfileAttribute
+@implementation TEALVisitorProfileAttribute
 
-+ (instancetype) profileAttributeWithType:(TEALProfileAttributeType)type {
++ (instancetype) profileAttributeWithType:(TEALVisitorProfileAttributeType)type {
 
     return [[[self class] alloc] initWithType:type];
 }
 
-- (instancetype) initWithType:(TEALProfileAttributeType)type {
+- (instancetype) initWithType:(TEALVisitorProfileAttributeType)type {
 
     self = [super init];
     
@@ -49,9 +49,9 @@
     [aCoder encodeInteger:self.type forKey:@"type"];
 }
 
-- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+- (BOOL) isEqualAttribute:(TEALVisitorProfileAttribute *)attribute {
     
-    if (![attribute isKindOfClass:[TEALProfileAttribute class]]) {
+    if (![attribute isKindOfClass:[TEALVisitorProfileAttribute class]]) {
         return NO;
     }
     
@@ -65,18 +65,18 @@
 
 @end
 
-@implementation TEALProfileAudienceAttribute
+@implementation TEALVisitorProfileAudienceAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeAudience];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeAudience];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileAudienceAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileAudienceAttribute *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -114,18 +114,18 @@
 
 @end
 
-@implementation TEALProfileBadgeAttribute
+@implementation TEALVisitorProfileBadgeAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeBadge];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeBadge];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileBadgeAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileBadgeAttribute *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -163,18 +163,18 @@
 
 @end
 
-@implementation TEALProfileDateAttribute
+@implementation TEALVisitorProfileDateAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeDate];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeDate];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileDateAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileDateAttribute *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -201,17 +201,17 @@
     [aCoder encodeDouble:self.timestamp forKey:@"timestamp"];
 }
 
-- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+- (BOOL) isEqualAttribute:(TEALVisitorProfileAttribute *)attribute {
 
     if (![super isEqualAttribute:attribute]) {
         return NO;
     }
     
-    if (![attribute isKindOfClass:[TEALProfileDateAttribute class]]) {
+    if (![attribute isKindOfClass:[TEALVisitorProfileDateAttribute class]]) {
         return NO;
     }
 
-    TEALProfileDateAttribute *date = (TEALProfileDateAttribute *)attribute;
+    TEALVisitorProfileDateAttribute *date = (TEALVisitorProfileDateAttribute *)attribute;
 
     if (!self.timestamp || !date.timestamp) {
         return NO;
@@ -232,18 +232,18 @@
 
 @end
 
-@implementation TEALProfileFlagAttribute
+@implementation TEALVisitorProfileFlagAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeFlag];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeFlag];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileFlagAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileFlagAttribute *copy = [[[self class] allocWithZone:zone] init];
 
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -270,17 +270,17 @@
     [aCoder encodeBool:self.value forKey:@"value"];
 }
 
-- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+- (BOOL) isEqualAttribute:(TEALVisitorProfileAttribute *)attribute {
     
     if (![super isEqualAttribute:attribute]) {
         return NO;
     }
     
-    if (![attribute isKindOfClass:[TEALProfileFlagAttribute class]]) {
+    if (![attribute isKindOfClass:[TEALVisitorProfileFlagAttribute class]]) {
         return NO;
     }
     
-    TEALProfileFlagAttribute *flag = (TEALProfileFlagAttribute *)attribute;
+    TEALVisitorProfileFlagAttribute *flag = (TEALVisitorProfileFlagAttribute *)attribute;
     
     return self.value == flag.value;
 }
@@ -298,18 +298,18 @@
 
 @end
 
-@implementation TEALProfileMetricAttribute
+@implementation TEALVisitorProfileMetricAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeMetric];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeMetric];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileMetricAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileMetricAttribute *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -336,17 +336,17 @@
     [aCoder encodeFloat:self.value forKey:@"value"];
 }
 
-- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+- (BOOL) isEqualAttribute:(TEALVisitorProfileAttribute *)attribute {
     
     if (![super isEqualAttribute:attribute]) {
         return NO;
     }
     
-    if (![attribute isKindOfClass:[TEALProfileMetricAttribute class]]) {
+    if (![attribute isKindOfClass:[TEALVisitorProfileMetricAttribute class]]) {
         return NO;
     }
     
-    TEALProfileMetricAttribute *metric = (TEALProfileMetricAttribute *)attribute;
+    TEALVisitorProfileMetricAttribute *metric = (TEALVisitorProfileMetricAttribute *)attribute;
     
     return self.value == metric.value;
 }
@@ -362,18 +362,18 @@
 
 @end
 
-@implementation TEALProfilePropertyAttribute
+@implementation TEALVisitorProfilePropertyAttribute
 
 - (instancetype) init {
     
-    self = [super initWithType:TEALProfileAttributeTypeProperty];
+    self = [super initWithType:TEALVisitorProfileAttributeTypeProperty];
     
     return self;
 }
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfilePropertyAttribute *copy = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfilePropertyAttribute *copy = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.attributeID    = [self.attributeID copyWithZone:zone];
@@ -400,17 +400,17 @@
     [aCoder encodeObject:self.value forKey:@"value"];
 }
 
-- (BOOL) isEqualAttribute:(TEALProfileAttribute *)attribute {
+- (BOOL) isEqualAttribute:(TEALVisitorProfileAttribute *)attribute {
     
     if (![super isEqualAttribute:attribute]) {
         return NO;
     }
     
-    if (![attribute isKindOfClass:[TEALProfilePropertyAttribute class]]) {
+    if (![attribute isKindOfClass:[TEALVisitorProfilePropertyAttribute class]]) {
         return NO;
     }
     
-    TEALProfilePropertyAttribute *property = (TEALProfilePropertyAttribute *)attribute;
+    TEALVisitorProfilePropertyAttribute *property = (TEALVisitorProfilePropertyAttribute *)attribute;
     
     if (!self.value || !property.value) {
         return NO;

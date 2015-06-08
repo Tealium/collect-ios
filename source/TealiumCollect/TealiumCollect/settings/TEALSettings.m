@@ -43,7 +43,7 @@
         _status                         = TEALSettingsStatusNew;
         // Configuration
         _useHTTP                        = NO;
-        _pollingFrequency               = TEALProfilePollingFrequencyAfterEveryEvent;
+        _pollingFrequency               = TEALVisitorProfilePollingFrequencyAfterEveryEvent;
         // MPS
         _numberOfDaysDispatchesAreValid = -1;
         _dispatchSize                   = 1;

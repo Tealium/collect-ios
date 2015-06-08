@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, TEALSettingsStatus) {
 #pragma mark - Configuration
 
 @property (nonatomic) BOOL useHTTP;
-@property (nonatomic) TEALProfilePollingFrequency pollingFrequency;
+@property (nonatomic) TEALVisitorProfilePollingFrequency pollingFrequency;
 @property (nonatomic) TEALCollectLogLevel logLevel;
 
 #pragma mark - Mobile Publish Settings

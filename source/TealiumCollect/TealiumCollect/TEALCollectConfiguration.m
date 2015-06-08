@@ -24,7 +24,7 @@
     configuration.profileName       = profileName;
     configuration.environmentName   = environmentName;
     configuration.useHTTP           = NO;
-    configuration.pollingFrequency  = TEALProfilePollingFrequencyAfterEveryEvent;
+    configuration.pollingFrequency  = TEALVisitorProfilePollingFrequencyAfterEveryEvent;
     configuration.logLevel          = TEALCollectLogLevelNone;
    
     configuration.audienceStreamProfile = @"main";

@@ -1,38 +1,38 @@
 //
-//  TEALProfileHelpers.m
+//  TEALVisitorProfileHelpers.m
 //  Tealium Collect Library
 //
 //  Created by George Webster on 3/10/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALProfileHelpers.h"
+#import "TEALVisitorProfileHelpers.h"
 
 
 
-@implementation TEALProfileHelpers
+@implementation TEALVisitorProfileHelpers
 
-+ (NSString *)keypathForAttributeType:(TEALProfileAttributeType)type {
++ (NSString *)keypathForAttributeType:(TEALVisitorProfileAttributeType)type {
     
     NSString *keypath = nil;
     
     switch (type) {
-        case TEALProfileAttributeTypeAudience:
+        case TEALVisitorProfileAttributeTypeAudience:
             keypath = @"audiences";
             break;
-        case TEALProfileAttributeTypeBadge:
+        case TEALVisitorProfileAttributeTypeBadge:
             keypath = @"badges";
             break;
-        case TEALProfileAttributeTypeDate:
+        case TEALVisitorProfileAttributeTypeDate:
             keypath = @"dates";
             break;
-        case TEALProfileAttributeTypeFlag:
+        case TEALVisitorProfileAttributeTypeFlag:
             keypath = @"flages";
             break;
-        case TEALProfileAttributeTypeMetric:
+        case TEALVisitorProfileAttributeTypeMetric:
             keypath = @"metrics";
             break;
-        case TEALProfileAttributeTypeProperty:
+        case TEALVisitorProfileAttributeTypeProperty:
             keypath = @"properties";
             break;
         default:
@@ -42,11 +42,11 @@
     return keypath;
 }
 
-+ (NSArray *) arrayOfAttrubutesForType:(TEALProfileAttributeType)type
++ (NSArray *) arrayOfAttrubutesForType:(TEALVisitorProfileAttributeType)type
                             fromSource:(NSDictionary *)sourceProfile
-                             withBlock:(TEALProfileAttributeCreationBlock)block {
+                             withBlock:(TEALVisitorProfileAttributeCreationBlock)block {
     
-    NSString *keypath = [TEALProfileHelpers keypathForAttributeType:type];
+    NSString *keypath = [TEALVisitorProfileHelpers keypathForAttributeType:type];
     
     NSDictionary *sourceAttributes = sourceProfile[keypath];
     
@@ -58,7 +58,7 @@
     
     [sourceAttributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
-        TEALProfileAttribute *attribute = block(key, obj);
+        TEALVisitorProfileAttribute *attribute = block(key, obj);
         
         [tempAttributes addObject:attribute];
         
@@ -71,9 +71,9 @@
 
 + (NSArray *) arrayOfAudiencesFromSource:(NSDictionary *)source {
     
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfileAudienceAttribute *attribute = [TEALProfileAudienceAttribute new];
+        TEALVisitorProfileAudienceAttribute *attribute = [TEALVisitorProfileAudienceAttribute new];
         
         attribute.attributeID = key;
         attribute.name = obj;
@@ -81,32 +81,32 @@
         return attribute;
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeAudience
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeAudience
                                              fromSource:source
                                               withBlock:attributeBlock];
 }
 
 + (NSArray *) arrayOfBadgesFromSource:(NSDictionary *)source {
     
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfileBadgeAttribute *attribute = [TEALProfileBadgeAttribute new];
+        TEALVisitorProfileBadgeAttribute *attribute = [TEALVisitorProfileBadgeAttribute new];
         
         attribute.attributeID = key;
         
         return attribute;
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeBadge
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeBadge
                                              fromSource:source
                                               withBlock:attributeBlock];
 }
 
 + (NSArray *) arrayOfDatesFromSource:(NSDictionary *)source {
     
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfileDateAttribute *attribute = [TEALProfileDateAttribute new];
+        TEALVisitorProfileDateAttribute *attribute = [TEALVisitorProfileDateAttribute new];
         
         attribute.attributeID = key;
         
@@ -118,16 +118,16 @@
 
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeDate
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeDate
                                              fromSource:source
                                               withBlock:attributeBlock];
 }
 
 + (NSArray *) arrayOfFlagsFromSource:(NSDictionary *)source {
 
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfileFlagAttribute *attribute = [TEALProfileFlagAttribute new];
+        TEALVisitorProfileFlagAttribute *attribute = [TEALVisitorProfileFlagAttribute new];
         
         attribute.attributeID = key;
         
@@ -138,16 +138,16 @@
         return attribute;
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeFlag
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeFlag
                                              fromSource:source
                                               withBlock:attributeBlock];
 }
 
 + (NSArray *) arrayOfMetricsFromSource:(NSDictionary *)source {
     
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfileMetricAttribute *attribute = [TEALProfileMetricAttribute new];
+        TEALVisitorProfileMetricAttribute *attribute = [TEALVisitorProfileMetricAttribute new];
         
         attribute.attributeID = key;
         
@@ -158,16 +158,16 @@
         return attribute;
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeMetric
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeMetric
                                              fromSource:source
                                               withBlock:attributeBlock];
 }
 
 + (NSArray *) arrayOfPropertiesFromSource:(NSDictionary *)source {
     
-    TEALProfileAttributeCreationBlock attributeBlock = ^TEALProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
         
-        TEALProfilePropertyAttribute *attribute = [TEALProfilePropertyAttribute new];
+        TEALVisitorProfilePropertyAttribute *attribute = [TEALVisitorProfilePropertyAttribute new];
         
         attribute.attributeID = key;
         
@@ -176,7 +176,7 @@
         return attribute;
     };
     
-    return [TEALProfileHelpers arrayOfAttrubutesForType:TEALProfileAttributeTypeProperty
+    return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeProperty
                                              fromSource:source
                                               withBlock:attributeBlock];
 }

@@ -13,7 +13,7 @@
 
 //#import "TEALDatasourceManager.h"
 
-#import "TEALProfileStore.h"
+#import "TEALVisitorProfileStore.h"
 #import "TEALSettings.h"
 
 // Queue / Operation Managers
@@ -42,7 +42,7 @@
 
 // Profile
 
-#import "TEALProfileHelpers.h"
+#import "TEALVisitorProfileHelpers.h"
 
 // API
 
@@ -52,7 +52,7 @@
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALCollectDispatchManager *dispatchManager;
-@property (strong, nonatomic) TEALProfileStore *profileStore;
+@property (strong, nonatomic) TEALVisitorProfileStore *profileStore;
 
 @property (strong, nonatomic) TEALDatasourceStore *datasourceStore;
 
@@ -162,7 +162,7 @@
     NSURL *profileURL = [TEALCollectAPIHelpers profileURLFromSettings:settings];
     NSURL *definitionURL = [TEALCollectAPIHelpers profileDefinitionsURLFromSettings:settings];
     
-    self.profileStore= [[TEALProfileStore alloc] initWithURLSessionManager:self.urlSessionManager
+    self.profileStore= [[TEALVisitorProfileStore alloc] initWithURLSessionManager:self.urlSessionManager
                                                                 profileURL:profileURL
                                                              definitionURL:definitionURL
                                                                  visitorID:visitorID];
@@ -368,7 +368,7 @@
             TEAL_LogVerbose(@"Successfully %@ dispatch.", statusString)
         }
     }
-    if (self.settingsStore.currentSettings.pollingFrequency == TEALProfilePollingFrequencyOnRequest) {
+    if (self.settingsStore.currentSettings.pollingFrequency == TEALVisitorProfilePollingFrequencyOnRequest) {
         return;
     }
     
@@ -446,7 +446,7 @@
     }
     
     
-    TEALProfileCompletionBlock storeCompletion = ^(TEALVisitorProfile *profile, NSError *error) {
+    TEALVisitorProfileCompletionBlock storeCompletion = ^(TEALVisitorProfile *profile, NSError *error) {
         
         if (profile) {
             TEAL_LogVerbose(@"got profile!!! : %@", profile);

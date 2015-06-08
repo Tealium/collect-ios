@@ -1,6 +1,6 @@
 //
 //  TEALSettingsStore.h
-//  AudienceStream Library
+//  Tealium Collect Library
 //
 //  Created by George Webster on 12/29/14.
 //  Copyright (c) 2014 Tealium Inc. All rights reserved.

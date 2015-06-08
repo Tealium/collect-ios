@@ -8,11 +8,11 @@
 //  Version 0.5
 
 #import <Foundation/Foundation.h>
+
 #import "TEALVisitorProfile.h"
 #import "TEALCollectConfiguration.h"
-#import <TealiumUtilities/TEALBlocks.h>
-#import "TEALEvent.h"
 
+#import <TealiumUtilities/TEALBlocks.h>
 
 @interface TealiumCollect : NSObject
 
@@ -61,14 +61,14 @@
 /**
  *  Retrieves the current visitor profile from AudienceStream.
  *
- *  @param completion Completion block with retrieved TEALProfile instance and an error should any problems occur.
+ *  @param completion Completion block with retrieved TEALVisitorProfile instance and an error should any problems occur.
  */
 + (void) fetchVisitorProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion;
 
 /**
  *  Last retrieved profile instance.  This is updated every time the profile is queried.  Depending on the settings the library was enabled with, this could be after every sendEvent:customData: call or only on explicit request.
  *
- *  @return Returns valid TEALProfile object.  Its properties might be nil of nothing is loaded into them yet.
+ *  @return Returns valid TEALVisitorProfile object.  Its properties might be nil of nothing is loaded into them yet.
  */
 + (TEALVisitorProfile *) cachedVisitorProfileCopy;
 

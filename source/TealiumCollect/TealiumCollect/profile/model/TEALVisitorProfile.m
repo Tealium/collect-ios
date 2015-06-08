@@ -1,15 +1,15 @@
 //
-//  TEALProfile.m
-//  TEALAudienceStream
+//  TEALVisitorProfile.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 1/5/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
 #import "TEALVisitorProfile.h"
-#import "TEALProfileAttribute.h"
-#import "TEALProfile+PrivateHeader.h"
-#import "TEALProfileHelpers.h"
+#import "TEALVisitorProfileAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+#import "TEALVisitorProfileHelpers.h"
 
 @interface TEALVisitorProfile()
 
@@ -24,7 +24,7 @@
 @property (strong, nonatomic) NSArray *metrics;
 @property (strong, nonatomic) NSArray *properties;
 
-@property (strong, nonatomic) TEALProfileCurrentVisit *currentVisit;
+@property (strong, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit;
 
 @end
 

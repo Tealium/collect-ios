@@ -23,7 +23,7 @@
                                                                               environment:@"dev"];
     
     config.logLevel = TEALCollectLogLevelExtremeVerbosity;
-    config.pollingFrequency = TEALProfilePollingFrequencyOnRequest;
+    config.pollingFrequency = TEALVisitorProfilePollingFrequencyOnRequest;
     
     [TealiumCollect enableWithConfiguration:config];
     
