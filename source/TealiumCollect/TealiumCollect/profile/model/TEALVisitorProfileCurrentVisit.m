@@ -8,7 +8,7 @@
 
 #import "TEALVisitorProfileCurrentVisit.h"
 
-#import "TEALVisitorProfileAttribute.h"
+#import "TEALVisitorProfileBaseAttribute.h"
 #import "TEALVisitorProfile+PrivateHeader.h"
 #import "TEALVisitorProfileHelpers.h"
 

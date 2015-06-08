@@ -8,7 +8,12 @@
 
 #import "TEALVisitorProfileHelpers.h"
 
-
+#import "TEALVisitorProfileAudienceAttribute.h"
+#import "TEALVisitorProfileBadgeAttribute.h"
+#import "TEALVisitorProfileDateAttribute.h"
+#import "TEALVisitorProfileFlagAttribute.h"
+#import "TEALVisitorProfileMetricAttribute.h"
+#import "TEALVisitorProfilePropertyAttribute.h"
 
 @implementation TEALVisitorProfileHelpers
 
@@ -58,7 +63,7 @@
     
     [sourceAttributes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
-        TEALVisitorProfileAttribute *attribute = block(key, obj);
+        TEALVisitorProfileBaseAttribute *attribute = block(key, obj);
         
         [tempAttributes addObject:attribute];
         
@@ -71,7 +76,7 @@
 
 + (NSArray *) arrayOfAudiencesFromSource:(NSDictionary *)source {
     
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfileAudienceAttribute *attribute = [TEALVisitorProfileAudienceAttribute new];
         
@@ -88,7 +93,7 @@
 
 + (NSArray *) arrayOfBadgesFromSource:(NSDictionary *)source {
     
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfileBadgeAttribute *attribute = [TEALVisitorProfileBadgeAttribute new];
         
@@ -104,7 +109,7 @@
 
 + (NSArray *) arrayOfDatesFromSource:(NSDictionary *)source {
     
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfileDateAttribute *attribute = [TEALVisitorProfileDateAttribute new];
         
@@ -125,7 +130,7 @@
 
 + (NSArray *) arrayOfFlagsFromSource:(NSDictionary *)source {
 
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfileFlagAttribute *attribute = [TEALVisitorProfileFlagAttribute new];
         
@@ -145,7 +150,7 @@
 
 + (NSArray *) arrayOfMetricsFromSource:(NSDictionary *)source {
     
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfileMetricAttribute *attribute = [TEALVisitorProfileMetricAttribute new];
         
@@ -165,7 +170,7 @@
 
 + (NSArray *) arrayOfPropertiesFromSource:(NSDictionary *)source {
     
-    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileAttribute *(id key, id obj) {
+    TEALVisitorProfileAttributeCreationBlock attributeBlock = ^TEALVisitorProfileBaseAttribute *(id key, id obj) {
         
         TEALVisitorProfilePropertyAttribute *attribute = [TEALVisitorProfilePropertyAttribute new];
         
@@ -177,8 +182,8 @@
     };
     
     return [TEALVisitorProfileHelpers arrayOfAttrubutesForType:TEALVisitorProfileAttributeTypeProperty
-                                             fromSource:source
-                                              withBlock:attributeBlock];
+                                                    fromSource:source
+                                                     withBlock:attributeBlock];
 }
 
 @end

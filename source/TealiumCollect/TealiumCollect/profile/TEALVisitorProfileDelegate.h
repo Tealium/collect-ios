@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALVisitorProfileAttribute.h"
+#import "TEALVisitorProfileBaseAttribute.h"
 
 @protocol TEALVisitorProfileDelegate <NSObject>
 

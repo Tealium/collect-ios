@@ -1,6 +1,6 @@
 //
-//  TEALProfileCurrentVisit.h
-//  AS_Tests_UICatalog
+//  TEALVisitorProfileCurrentVisit.h
+//  Tealium Collect Library
 //
 //  Created by George Webster on 3/9/15.
 //  Copyright (c) 2015 f. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TEALProfileCurrentVisit : NSObject <NSCoding, NSCopying>
+@interface TEALVisitorProfileCurrentVisit : NSObject <NSCoding, NSCopying>
 
 @property (readonly) NSTimeInterval creationTimestamp;
 

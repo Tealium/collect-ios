@@ -1,5 +1,5 @@
 //
-//  TealiumCollect.m
+//  Tealium Collect Library.m
 //  Tealium Collect Library
 //
 //  Created by George Webster on 1/8/15.

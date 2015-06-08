@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALVisitorProfileAttribute.h"
+#import "TEALVisitorProfileBaseAttribute.h"
 
 @class TEALVisitorProfile;
 
-typedef TEALVisitorProfileAttribute * (^TEALVisitorProfileAttributeCreationBlock)(id key, id obj);
+typedef TEALVisitorProfileBaseAttribute * (^TEALVisitorProfileAttributeCreationBlock)(id key, id obj);
  
 typedef void (^TEALVisitorProfileCompletionBlock)(TEALVisitorProfile *profile, NSError *error);
 

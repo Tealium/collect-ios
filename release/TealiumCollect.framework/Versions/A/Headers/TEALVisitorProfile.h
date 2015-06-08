@@ -1,6 +1,6 @@
 //
-//  TEALProfile.h
-//  TEALAudienceStream
+//  TEALVisitorProfile.h
+//  Tealium Collect Library
 //
 //  Created by George Webster on 1/5/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALProfileCurrentVisit.h"
+#import "TEALVisitorProfileCurrentVisit.h"
 
 @interface TEALVisitorProfile : NSObject <NSCoding, NSCopying>
 
@@ -29,46 +29,46 @@
 /**
  *  Audiences this visitor's profile is associated with.
  *
- *  @return Array of TEALProfileAudienceAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfileAudienceAttribute objects or nil if none exist
  */
 - (NSArray *) audiences;
 
 /**
  *  Badges this visitor's profile is associated with.
  *
- *  @return Array of TEALProfileBadgeAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfileBadgeAttribute objects or nil if none exist
  */
 - (NSArray *) badges;
 
 /**
  *  Dates this visitor's profile is associated with.
  *
- *  @return Array of TEALProfileDateAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfileDateAttribute objects or nil if none exist
  */
 - (NSArray *) dates;
 
 /**
  *  Flags this visitor's profile is associated with.
  *
- *  @return Array of TEALProfileFlagAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfileFlagAttribute objects or nil if none exist
  */
 - (NSArray *) flags;
 
 /**
  *  Metrics this visitor's profile is associated with.
  *
- *  @return Array of TEALProfileMetricAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfileMetricAttribute objects or nil if none exist
  */
 - (NSArray *) metrics;
 
 /**
  *  Properties or "Traits" this visitor's profile is associated with.
  *
- *  @return Array of TEALProfilePropertyAttribute objects or nil if none exist
+ *  @return Array of TEALVisitorProfilePropertyAttribute objects or nil if none exist
  */
 - (NSArray *) properties;
 
-@property (readonly, nonatomic) TEALProfileCurrentVisit *currentVisit;
+@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit;
 
 
 /**

@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Framework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>TealiumCollect.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>3708417F1B1F6FAE0017A089</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7537B471B210CD4009896E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
