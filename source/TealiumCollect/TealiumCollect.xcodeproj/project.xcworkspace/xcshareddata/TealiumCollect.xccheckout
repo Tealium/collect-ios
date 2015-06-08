@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F27CE5C0-2F31-457E-92F7-769D2F15CC29</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TealiumCollect</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DA67B36770D98553058CEEEFBF25E91106D3C539</key>
+		<string>https://github.com/ethyreal/collect-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>source/TealiumCollect/TealiumCollect.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DA67B36770D98553058CEEEFBF25E91106D3C539</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ethyreal/collect-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DA67B36770D98553058CEEEFBF25E91106D3C539</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DA67B36770D98553058CEEEFBF25E91106D3C539</string>
+			<key>IDESourceControlWCCName</key>
+			<string>collect-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
