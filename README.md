@@ -8,9 +8,9 @@ The easist way to get started to walking through the steps outlined in the [Gett
 
 ## Communication
 
-* If you have *code questions* or have experienced *errors* please post an issue in the [issues page](../../issues)
-* If you have *general questions* or want to network with other users please visit the [Tealium Learning Community](https://community.tealiumiq.com)
-* If you have *specific* account releated questions please contact your Tealium account manager
+* If you have **code questions** or have experienced **errors** please post an issue in the [issues page](../../issues)
+* If you have **general questions** or want to network with other users please visit the [Tealium Learning Community](https://community.tealiumiq.com)
+* If you have **account specific questions** please contact your Tealium account manager
 
 ## License
 
