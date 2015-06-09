@@ -12,7 +12,7 @@ subtitle: a quick start guide
 	- [Add Linker Flags](getting-started.html#add-linker-flags)
 	- [Import Headers](getting-started.html#import-headers)
 - [Enable](getting-started.html#enable)
-- [Send Data](getting-started.html#send-data)
+- [Send Action Data](getting-started.html#send-action-data)
 - [Fetch Visitor Profile](getting-started.html#fetch-visitor-profile)
 
 <hr/>
@@ -101,7 +101,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 }
 ```
 
-### <span id="send-data"/> Send Data
+### <span id="send-action-data"/> Send Action Data
 
 After determining what visitor behaviors should be tracked, utilize the ```sendEvent:withData``` method to send link or view events with relevant data to AudienceStream:
 
