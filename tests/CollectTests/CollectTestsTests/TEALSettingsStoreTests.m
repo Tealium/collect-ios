@@ -58,12 +58,12 @@
 
 - (void) testConfigurationPollingFrequency {
     
-    TEALProfilePollingFrequency targetFrequency = TEALProfilePollingFrequencyAfterEveryEvent;
+    TEALVisitorProfilePollingFrequency targetFrequency = TEALVisitorProfilePollingFrequencyAfterEveryEvent;
     
     // default
     XCTAssertEqual(targetFrequency, self.configuration.pollingFrequency, @"TEALAudienceStreamConfiguration should default to %lu", (unsigned long)targetFrequency);
     
-    targetFrequency = TEALProfilePollingFrequencyOnRequest;
+    targetFrequency = TEALVisitorProfilePollingFrequencyOnRequest;
     
     self.configuration.pollingFrequency = targetFrequency;
     
@@ -73,7 +73,7 @@
     XCTAssertEqual(targetFrequency, settings.pollingFrequency, @"Settigns Polling Frequency: %lu should be : %lu", (unsigned long)settings.pollingFrequency, (unsigned long)targetFrequency);
     
     
-    targetFrequency = TEALProfilePollingFrequencyAfterEveryEvent;
+    targetFrequency = TEALVisitorProfilePollingFrequencyAfterEveryEvent;
     
     self.configuration.pollingFrequency = targetFrequency;
     

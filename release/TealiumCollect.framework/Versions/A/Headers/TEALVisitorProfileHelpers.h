@@ -1,5 +1,5 @@
 //
-//  TEALProfileHelpers.h
+//  TEALVisitorProfileHelpers.h
 //  Tealium Collect Library
 //
 //  Created by George Webster on 3/10/15.
@@ -8,22 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALProfileAttribute.h"
+#import "TEALVisitorProfileBaseAttribute.h"
 
 @class TEALVisitorProfile;
 
-typedef TEALProfileAttribute * (^TEALProfileAttributeCreationBlock)(id key, id obj);
+typedef TEALVisitorProfileBaseAttribute * (^TEALVisitorProfileAttributeCreationBlock)(id key, id obj);
+ 
+typedef void (^TEALVisitorProfileCompletionBlock)(TEALVisitorProfile *profile, NSError *error);
 
-typedef void (^TEALProfileCompletionBlock)(TEALVisitorProfile *profile, NSError *error);
 
+@interface TEALVisitorProfileHelpers : NSObject
 
-@interface TEALProfileHelpers : NSObject
-
-+ (NSArray *) arrayOfAttrubutesForType:(TEALProfileAttributeType)type
++ (NSArray *) arrayOfAttrubutesForType:(TEALVisitorProfileAttributeType)type
                             fromSource:(NSDictionary *)sourceProfile
-                             withBlock:(TEALProfileAttributeCreationBlock)block;
+                             withBlock:(TEALVisitorProfileAttributeCreationBlock)block;
 
-+ (NSString *)keypathForAttributeType:(TEALProfileAttributeType)type;
++ (NSString *) keypathForAttributeType:(TEALVisitorProfileAttributeType)type;
 
 + (NSArray *) arrayOfAudiencesFromSource:(NSDictionary *)source;
 

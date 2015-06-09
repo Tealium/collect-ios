@@ -10,13 +10,13 @@
 #import <TealiumCollect/TEALSettingsStore.h>
 #import <TealiumCollect/TEALCollectDispatchManager.h>
 #import <TealiumCollect/TEALURLSessionManager.h>
-#import <TealiumCollect/TEALProfileStore.h>
+#import <TealiumCollect/TEALVisitorProfileStore.h>
 
 @interface TealiumCollect (Private)
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALOperationManager *operationManager;
-@property (strong, nonatomic) TEALProfileStore *profileStore;
+@property (strong, nonatomic) TEALVisitorProfileStore *profileStore;
 @property (strong, nonatomic) TEALCollectDispatchManager *dispatchManager;
 @property (strong, nonatomic) TEALURLSessionManager *urlSessionManager;
 

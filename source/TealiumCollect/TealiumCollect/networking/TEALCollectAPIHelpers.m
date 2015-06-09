@@ -1,5 +1,5 @@
 //
-//  TEALAudienceStreamAPIHelpers.m
+//  Tealium Collect LibraryAPIHelpers.m
 //  Tealium Collect Library
 //
 //  Created by George Webster on 4/17/15.

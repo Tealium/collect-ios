@@ -1,22 +1,22 @@
 //
-//  TEALProfileStore.m
-//  AudienceStream Library
+//  TEALVisitorProfileStore.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 2/18/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
-#import "TEALProfileStore.h"
+#import "TEALVisitorProfileStore.h"
 
 #import "TEALVisitorProfile.h"
-#import "TEALProfile+PrivateHeader.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
 #import "TEALNetworkHelpers.h"
 #import "TEALURLSessionManager.h"
 
 #import "TEALError.h"
 #import "TEALLogger.h"
 
-@interface TEALProfileStore ()
+@interface TEALVisitorProfileStore ()
 
 @property (strong, nonatomic) TEALVisitorProfile *currentProfile;
 
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation TEALProfileStore
+@implementation TEALVisitorProfileStore
 
 - (instancetype) initWithURLSessionManager:(TEALURLSessionManager *)urlSessionManager
                                 profileURL:(NSURL *)profileURL
@@ -46,7 +46,7 @@
     return self;
 }
 
-- (void) fetchProfileWithCompletion:(TEALProfileCompletionBlock)completion {
+- (void) fetchProfileWithCompletion:(TEALVisitorProfileCompletionBlock)completion {
 
     if (!self.urlSessionManager || !self.profileURL) {
         NSError *error = [TEALError errorWithCode:TEALErrorCodeMalformed
@@ -84,7 +84,7 @@
         return;
     }
     
-    __weak TEALProfileStore *weakSelf = self;
+    __weak TEALVisitorProfileStore *weakSelf = self;
     
     [self.urlSessionManager performRequest:request
                      withJSONCompletion:^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
@@ -181,7 +181,7 @@
 - (void) updateProfileAudiences:(TEALVisitorProfile *)profile
                      fromSource:(NSDictionary *)source {
     
-    NSArray *audiences = [TEALProfileHelpers arrayOfAudiencesFromSource:source];
+    NSArray *audiences = [TEALVisitorProfileHelpers arrayOfAudiencesFromSource:source];
     
     // TODO notify delegates
 
@@ -191,7 +191,7 @@
 - (void) updateProfileBadges:(TEALVisitorProfile *)profile
                   fromSource:(NSDictionary *)source {
     
-    NSArray *badges = [TEALProfileHelpers arrayOfBadgesFromSource:source];
+    NSArray *badges = [TEALVisitorProfileHelpers arrayOfBadgesFromSource:source];
     
     // TODO notify delegates
 
@@ -201,7 +201,7 @@
 - (void) updateProfileDates:(TEALVisitorProfile *)profile
                  fromSource:(NSDictionary *)source {
     
-    NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
+    NSArray *dates = [TEALVisitorProfileHelpers arrayOfDatesFromSource:source];
     
     // TODO notify delegates
 
@@ -211,7 +211,7 @@
 - (void) updateProfileFlags:(TEALVisitorProfile *)profile
                  fromSource:(NSDictionary *)source {
     
-    NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
+    NSArray *flags = [TEALVisitorProfileHelpers arrayOfFlagsFromSource:source];
     
     // TODO notify delegates
 
@@ -221,7 +221,7 @@
 - (void) updateProfileMetrics:(TEALVisitorProfile *)profile
                    fromSource:(NSDictionary *)source {
     
-    NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
+    NSArray *metrics = [TEALVisitorProfileHelpers arrayOfMetricsFromSource:source];
     
     // TODO notify delegates
 
@@ -231,7 +231,7 @@
 - (void) updateProfileProperties:(TEALVisitorProfile *)profile
                       fromSource:(NSDictionary *)source {
     
-    NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
+    NSArray *properties = [TEALVisitorProfileHelpers arrayOfPropertiesFromSource:source];
 
     // TODO notify delegates
 
@@ -249,7 +249,7 @@
         return;
     }
     
-    TEALProfileCurrentVisit *visit = [TEALProfileCurrentVisit new];
+    TEALVisitorProfileCurrentVisit *visit = [TEALVisitorProfileCurrentVisit new];
     
     
     visit.totalEventCount = [source[@"total_event_count"] integerValue];
@@ -265,7 +265,7 @@
 
 #pragma mark - Current Visit Attributes
 
-- (void) updateCurrentVisitAttributes:(TEALProfileCurrentVisit *)visit
+- (void) updateCurrentVisitAttributes:(TEALVisitorProfileCurrentVisit *)visit
                            fromSource:(NSDictionary *)source {
 
     [self updateCurrentVisitDates:visit
@@ -281,40 +281,40 @@
                             fromSource:source];
 }
 
-- (void) updateCurrentVisitDates:(TEALProfileCurrentVisit *)visit
+- (void) updateCurrentVisitDates:(TEALVisitorProfileCurrentVisit *)visit
                       fromSource:(NSDictionary *)source {
     
-    NSArray *dates = [TEALProfileHelpers arrayOfDatesFromSource:source];
+    NSArray *dates = [TEALVisitorProfileHelpers arrayOfDatesFromSource:source];
     
     // TODO notify delegates
 
     visit.dates = dates;
 }
 
-- (void) updateCurrentVisitFlags:(TEALProfileCurrentVisit *)visit
+- (void) updateCurrentVisitFlags:(TEALVisitorProfileCurrentVisit *)visit
                       fromSource:(NSDictionary *)source {
     
-    NSArray *flags = [TEALProfileHelpers arrayOfFlagsFromSource:source];
+    NSArray *flags = [TEALVisitorProfileHelpers arrayOfFlagsFromSource:source];
 
     // TODO notify delegates
 
     visit.flags = flags;
 }
 
-- (void) updateCurrentVisitMetrics:(TEALProfileCurrentVisit *)visit
+- (void) updateCurrentVisitMetrics:(TEALVisitorProfileCurrentVisit *)visit
                         fromSource:(NSDictionary *)source {
     
-    NSArray *metrics = [TEALProfileHelpers arrayOfMetricsFromSource:source];
+    NSArray *metrics = [TEALVisitorProfileHelpers arrayOfMetricsFromSource:source];
 
     // TODO notify delegates
 
     visit.metrics = metrics;
 }
 
-- (void) updateCurrentVisitProperties:(TEALProfileCurrentVisit *)visit
+- (void) updateCurrentVisitProperties:(TEALVisitorProfileCurrentVisit *)visit
                            fromSource:(NSDictionary *)source {
     
-    NSArray *properties = [TEALProfileHelpers arrayOfPropertiesFromSource:source];
+    NSArray *properties = [TEALVisitorProfileHelpers arrayOfPropertiesFromSource:source];
 
     // TODO notify delegates
 

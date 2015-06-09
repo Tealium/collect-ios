@@ -1,5 +1,5 @@
 //
-//  TealiumCollect.h
+//  Tealium Collect Library.h
 //  Tealium Collect Library
 //
 //  Created by George Webster on 1/8/15.
@@ -8,27 +8,43 @@
 //  Version 0.5
 
 #import <Foundation/Foundation.h>
-#import "TEALVisitorProfile.h"
-#import "TEALCollectConfiguration.h"
-#import <TealiumUtilities/TEALBlocks.h>
-#import "TEALEvent.h"
 
+// Configuration
+
+#import "TEALCollectConfiguration.h"
+
+// Profile
+
+#import "TEALVisitorProfile.h"
+#import "TEALVisitorProfileCurrentVisit.h"
+
+// Attributes:
+
+#import "TEALVisitorProfileBaseAttribute.h"
+#import "TEALVisitorProfileAudienceAttribute.h"
+#import "TEALVisitorProfileBadgeAttribute.h"
+#import "TEALVisitorProfileDateAttribute.h"
+#import "TEALVisitorProfileFlagAttribute.h"
+#import "TEALVisitorProfileMetricAttribute.h"
+#import "TEALVisitorProfilePropertyAttribute.h"
+
+#import <TealiumUtilities/TEALBlocks.h>
 
 @interface TealiumCollect : NSObject
 
 # pragma mark - Setup / Configuration
 
 /**
- *  Starts the AudienceStream Library with the given configuration object.
+ *  Starts the Tealium Collect Library with the given configuration object.
  *
- *  @param configuration TEALAudienceStreamConfiguration instance with valid Account/Profile/Enviroment properties.
+ *  @param configuration TEALCollectConfiguration instance with valid Account/Profile/Enviroment properties.
  */
 + (void) enableWithConfiguration:(TEALCollectConfiguration *)configuration;
 
 /**
- *  Starts the AudienceStream Library with the given configuration object.
+ *  Starts the Tealium Collect Library with the given configuration object.
  *
- *  @param configuration TEALAudienceStreamConfiguration instance with valid Account/Profile/Enviroment properties.
+ *  @param configuration TEALCollectConfiguration instance with valid Account/Profile/Enviroment properties.
  *  @param completion    TEALBooleanCompletionBlock which is called after settings have loaded and visitorID has been created or restored.
  */
 + (void) enableWithConfiguration:(TEALCollectConfiguration *)configuration
@@ -39,36 +55,36 @@
  */
 + (void) disable;
 
-# pragma mark - Send AudienceStream Data
+# pragma mark - Send Collect Data
 
 /**
- *  Sends an event to AudienceStream.  Event are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
+ *  Sends an event to Collect.  Event are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
  *
  *  @param customData Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.
  */
 + (void) sendEventWithData:(NSDictionary *)customData;
 
 /**
- *  Sends a view to AudienceStream.  Views are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
+ *  Sends a view to Collect.  Views are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.
  *
  *  @param customData Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.
  */
 
 + (void) sendViewWithData:(NSDictionary *)customData;
 
-# pragma mark - Get AudienceStream Data
+# pragma mark - Get Collect Data
 
 /**
  *  Retrieves the current visitor profile from AudienceStream.
  *
- *  @param completion Completion block with retrieved TEALProfile instance and an error should any problems occur.
+ *  @param completion Completion block with retrieved TEALVisitorProfile instance and an error should any problems occur.
  */
 + (void) fetchVisitorProfileWithCompletion:(void (^)(TEALVisitorProfile *profile, NSError *error))completion;
 
 /**
  *  Last retrieved profile instance.  This is updated every time the profile is queried.  Depending on the settings the library was enabled with, this could be after every sendEvent:customData: call or only on explicit request.
  *
- *  @return Returns valid TEALProfile object.  Its properties might be nil of nothing is loaded into them yet.
+ *  @return Returns valid TEALVisitorProfile object.  Its properties might be nil of nothing is loaded into them yet.
  */
 + (TEALVisitorProfile *) cachedVisitorProfileCopy;
 

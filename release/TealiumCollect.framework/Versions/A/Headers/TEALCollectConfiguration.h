@@ -10,9 +10,9 @@
 
 #pragma mark - Configuration Types
 
-typedef NS_ENUM(NSUInteger, TEALProfilePollingFrequency) {
-    TEALProfilePollingFrequencyOnRequest = 1,
-    TEALProfilePollingFrequencyAfterEveryEvent
+typedef NS_ENUM(NSUInteger, TEALVisitorProfilePollingFrequency) {
+    TEALVisitorProfilePollingFrequencyOnRequest = 1,
+    TEALVisitorProfilePollingFrequencyAfterEveryEvent
 };
 
 typedef NS_ENUM(NSUInteger, TEALCollectLogLevel) {
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, TEALCollectLogLevel) {
 @property (copy, nonatomic) NSString *environmentName;
 
 @property (nonatomic) BOOL useHTTP;
-@property (nonatomic) TEALProfilePollingFrequency pollingFrequency;
+@property (nonatomic) TEALVisitorProfilePollingFrequency pollingFrequency;
 @property (nonatomic) TEALCollectLogLevel logLevel;
 
 @property (copy, nonatomic) NSString *audienceStreamProfile;

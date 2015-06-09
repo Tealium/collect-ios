@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //  Event Types
-//      used in TEALAudienceStream sendEvent:withData
+//      used in TealiumCollect sendEvent:withData
 //
 typedef NS_ENUM(NSUInteger, TEALEventType) {
     TEALEventTypeLink,

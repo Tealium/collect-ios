@@ -1,18 +1,18 @@
 //
-//  TEALProfileCurrentVisit.m
-//  AS_Tests_UICatalog
+//  TEALVisitorProfileCurrentVisit.m
+//  Tealium Collect Library
 //
 //  Created by George Webster on 3/9/15.
 //  Copyright (c) 2015 f. All rights reserved.
 //
 
-#import "TEALProfileCurrentVisit.h"
+#import "TEALVisitorProfileCurrentVisit.h"
 
-#import "TEALProfileAttribute.h"
-#import "TEALProfile+PrivateHeader.h"
-#import "TEALProfileHelpers.h"
+#import "TEALVisitorProfileBaseAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+#import "TEALVisitorProfileHelpers.h"
 
-@interface TEALProfileCurrentVisit ()
+@interface TEALVisitorProfileCurrentVisit ()
 
 @property (readwrite) NSTimeInterval creationTimestamp;
 
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation TEALProfileCurrentVisit
+@implementation TEALVisitorProfileCurrentVisit
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder {
     
@@ -56,7 +56,7 @@
 
 - (instancetype) copyWithZone:(NSZone *)zone {
     
-    TEALProfileCurrentVisit *copy   = [[[self class] allocWithZone:zone] init];
+    TEALVisitorProfileCurrentVisit *copy   = [[[self class] allocWithZone:zone] init];
     
     if (copy) {
         copy.totalEventCount    = self.totalEventCount;

@@ -1,13 +1,13 @@
 //
-//  TEALProfile+PrivateHeader.h
-//  AudienceStream Library
+//  TEALVisitorProfile+PrivateHeader.h
+//  Tealium Collect Library
 //
 //  Created by George Webster on 2/10/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
 
 #import "TEALVisitorProfile.h"
-#import "TEALProfileCurrentVisit.h"
+#import "TEALVisitorProfileCurrentVisit.h"
 
 @interface TEALVisitorProfile (PrivateHeader)
 
@@ -22,7 +22,7 @@
 @property (readwrite, nonatomic) NSArray *metrics;
 @property (readwrite, nonatomic) NSArray *properties;
 
-@property (readwrite, nonatomic) TEALProfileCurrentVisit *currentVisit;
+@property (readwrite, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit;
 
 
 /**
@@ -36,7 +36,7 @@
 
 @end
 
-@interface TEALProfileCurrentVisit (PrivateHeader)
+@interface TEALVisitorProfileCurrentVisit (PrivateHeader)
 
 - (void) storeRawCurrentVisit:(NSDictionary *)rawProfile;
 

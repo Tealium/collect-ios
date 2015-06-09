@@ -1,5 +1,5 @@
 //
-//  TEALProfileDelegate.h
+//  TEALVisitorProfileDelegate.h
 //  Tealium Collect Library
 //
 //  Created by George Webster on 5/4/15.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TEALProfileAttribute.h"
+#import "TEALVisitorProfileBaseAttribute.h"
 
-@protocol TEALProfileDelegate <NSObject>
+@protocol TEALVisitorProfileDelegate <NSObject>
 
 - (void) didUpdateProfile:(TEALVisitorProfile *)oldProfile newProfile:(TEALVisitorProfile *)newProfile;
 
