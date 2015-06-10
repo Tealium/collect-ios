@@ -1,0 +1,6 @@
+baseurl: /collect-ios
+name: Tealium Collect Library for iOS
+markdown: redcarpet
+highlighter: pygments
+permalink: /:title.html
+excerpt_separator: "<!--more-->"
