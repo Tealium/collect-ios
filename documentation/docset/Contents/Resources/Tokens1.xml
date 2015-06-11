@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TEALCollectConfiguration.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TEALCollectConfiguration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TEALCollectConfiguration/configurationWithAccount:profile:environment:</TokenIdentifier>
+			<Abstract type="html">Creates a default configration instance for a given account / profile / environment combination.  The TiQ information is used to fetch the profile&apos;s mobile publish settings used</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)configurationWithAccount:(NSString *)accountName profile:(NSString *)profileName environment:(NSString *)environmentName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>accountName</Name>
+					<Abstract type="html">String of TiQ / AudienceStream account name</Abstract>
+				</Parameter><Parameter>
+					<Name>profileName</Name>
+					<Abstract type="html">String of TiQ Profile Name</Abstract>
+				</Parameter><Parameter>
+					<Name>environmentName</Name>
+					<Abstract type="html">String</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Valid configuration instance to pass to the enableWithConfiguration: method.</Abstract></ReturnValue>
+			<Anchor>//api/name/configurationWithAccount:profile:environment:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
