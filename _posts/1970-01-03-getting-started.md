@@ -34,7 +34,7 @@ Clone or download the library repo onto your dev machine by clicking on the *Clo
 
 #### <span id="add-to-project"/> 2. Add to Project
 
-From the *audiencestream-ios/Release* folder, drag & drop the *TealiumUtilities* and *TEALAudienceStream* frameworks into your XCode project's Navigation window.
+From the *collect-ios/Release* folder, drag & drop the *TealiumUtilities* and *TealiumCollect* frameworks into your XCode project's Navigation window.
 
 #### <span id="link-frameworks"/> 3. Link Frameworks
 
@@ -52,35 +52,35 @@ Add the "-ObjC" linker flag to your project's Target-Build Settings.
 For Objective-C import the library at the top of any file you wish to access the library in:
 
 ```objective-c
-#import <TEALAudienceStream/TEALAudienceStream.h>
+#import <TealiumCollect/TealiumCollect.h>
 ```
 ##### Swift
 
 In swift you'll need to Update your project's Objective-C bridging header or create one with the following entries:
 
 ```objective-c
-#import <TEALAudienceStream/TEALAudienceStream.h>
-#import <TEALAudienceStream/TEALAudienceStreamConfiguration.h>
-#import <TEALAudienceStream/TEALProfile.h>
-#import <TEALAudienceStream/TEALEvent.h>
+#import <TealiumCollect/TealiumCollect.h>
+#import <TealiumCollect/TEALCollectConfiguration.h>
+#import <TealiumCollect/TEALVisitorProfile.h>
+#import <TealiumCollect/TEALEvent.h>
 ```
 
 ### <span id="enable"/> Enable
 
-Enable the library with a configuration (```TEALAudienceStreamConfiguration```) instance in your appDelegate class:
+Enable the library with a configuration (```TEALCollectConfiguration```) instance in your appDelegate class:
 
 ##### Objective-C
 
 ```objective-c
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    TEALAudienceStreamConfiguration *config = [TEALAudienceStreamConfiguration configurationWithAccount:@"tealiummobile"
-                                                                                                profile:@"demo"
-                                                                                            environment:@"dev"];
+    TEALCollectConfiguration *config = [TEALCollectConfiguration configurationWithAccount:@"tealiummobile"
+                                                                                  profile:@"demo"
+                                                                              environment:@"dev"];
     
-    config.logLevel = TEALAudienceStreamLogLevelVerbose;
+    config.logLevel = TealiumCollectLogLevelVerbose;
     
-    [TEALAudienceStream enableWithConfiguration:config];
+    [TealiumCollect enableWithConfiguration:config];
     
     return YES;
 }
@@ -91,11 +91,11 @@ Enable the library with a configuration (```TEALAudienceStreamConfiguration```) 
 ```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
-    let configuration = TEALAudienceStreamConfiguration(account: "tealiummobile", profile: "demo", environment: "dev")
+    let configuration = TEALCollectConfiguration(account: "tealiummobile", profile: "demo", environment: "dev")
     
-    configuration.logLevel = TEALAudienceStreamLogLevel.Verbose
+    configuration.logLevel = TealiumCollectLogLevel.Verbose
     
-    TEALAudienceStream.enableWithConfiguration(configuration)
+    TealiumCollect.enableWithConfiguration(configuration)
     
     return true
 }
@@ -112,9 +112,7 @@ After determining what visitor behaviors should be tracked, utilize the ```sendE
 
     NSDictionary *data = @{@"event_name" : eventName};
     
-    [TEALAudienceStream sendEvent:TEALEventTypeLink
-                         withData:data];
-
+    [TealiumCollect sendEventWithData:data];
 }
 ```
 ##### Swift
@@ -124,7 +122,7 @@ func sendLifecycleEventWithName(name: String) {
     
     let data: [String: String] = ["event_name" : name]
     
-    TEALAudienceStream.sendEvent(TEALEventType.Link, withData: data)
+    TealiumCollect.sendEventWithData(data)
 }
 ```
 
@@ -136,14 +134,14 @@ The ```AudienceStream``` library offers a variety of means to identifiy visitor 
 
 Access the enriched Visitor Profile from AudienceStream using one of two methods:
 
-First access to the last profile the library received is always available via the ```cachedProfileCopy```  method:
+First access to the last profile the library received is always available via the ```cachedVisitorProfileCopy```  method:
 
 ##### Objective-C
 
 ```objective-c
 - (void) accessLastLoadedAudienceStreamProfile {
 
-    TEALProfile *profile = [TEALAudienceStream cachedProfileCopy];
+    TEALVisitorProfile *profile = [TealiumCollect cachedVisitorProfileCopy];
 
     if (profile) {
         NSLog(@"last loaded profile: %@", profile);
@@ -158,7 +156,7 @@ First access to the last profile the library received is always available via th
 ```swift
 func accessLastLoadedAudienceStreamProfile() {
     
-    if let profile:TEALProfile = TEALAudienceStream.cachedProfileCopy() {
+    if let profile:TEALVisitorProfile = TealiumCollect.cachedVisitorProfileCopy() {
         println("last loaded profile: \(profile)")
     } else {
         println("a valid profile has not been received yet.")
@@ -166,14 +164,14 @@ func accessLastLoadedAudienceStreamProfile() {
 }
 ```
 
-Second to explicitly fetch a new copy of the user's current profile you can use the ```fetchProfileWithCompletion:``` method.  This will query the latest profile and pass the result to the completion block provided:
+Second to explicitly fetch a new copy of the user's current profile you can use the ```fetchVisitorProfileWithCompletion:``` method.  This will query the latest profile and pass the result to the completion block provided:
 
 ##### Objective-C
 
 ```objective-c
 - (void) fetchAudienceStreamProfile {
     
-    [TEALAudienceStream fetchProfileWithCompletion:^(TEALProfile *profile, NSError *error) {
+    [TealiumCollect fetchVisitorProfileWithCompletion:^(TEALVisitorProfile *profile, NSError *error) {
        
         if (error) {
             NSLog(@"test app failed to receive profile with error: %@", [error localizedDescription]);
@@ -190,7 +188,7 @@ Second to explicitly fetch a new copy of the user's current profile you can use 
 ```swift
 func fetchAudienceStreamProfile() {
     
-    TEALAudienceStream.fetchProfileWithCompletion { (profile, error) -> Void in
+    TealiumCollect.fetchVisitorProfileWithCompletion { (profile, error) -> Void in
         
         if (error != nil) {
             println("test app failed to receive profile with error: \(error.localizedDescription)")

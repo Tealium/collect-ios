@@ -25,8 +25,7 @@ Screen Views are some of the simplest and useful data to collect, track these wi
     NSDictionary *data = @{@"screen_title" : @"main",
                            @"view_action"  : @"appeared" };
 
-    [TEALAudienceStream sendEvent:TEALEventTypeView
-    					 withData:data];
+    [TealiumCollect sendViewWithData:data];
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
@@ -36,8 +35,7 @@ Screen Views are some of the simplest and useful data to collect, track these wi
     NSDictionary *data = @{@"screen_title" : @"main",
                            @"view_action"  : @"disappeared" };
 
-    [TEALAudienceStream sendEvent:TEALEventTypeView
-    					 withData:data];
+    [TealiumCollect sendViewWithData:data];
 }
 ```
 ##### Swift
@@ -50,7 +48,7 @@ override func viewDidAppear(animated: Bool) {
     let data: [String: String] = ["screen_title" : "main",
                                   "view_action"  : "appeared"]
 
-    TEALAudienceStream.sendEvent(TEALEventType.View, withData: data)
+    TealiumCollect.sendViewWithData(data)
 }
 
 override func viewDidDisappear(animated: Bool) {
@@ -61,7 +59,7 @@ override func viewDidDisappear(animated: Bool) {
                                   "view_action"  : "disappeared"]
 
     
-    TEALAudienceStream.sendEvent(TEALEventType.View, withData: data)
+    TealiumCollect.sendViewWithData: data)
 }
 ```
 
@@ -69,7 +67,7 @@ Not only will this setup allow for view counts, but it also provides AudienceStr
 
 ### <span id="links"/> Links
 
-Button taps, other UI interactions and milestones passed are simple data points that can be collected with the same ```sendEvent:withData:``` call:  
+Button taps, other UI interactions and milestones passed are simple data points that can be collected with the similar ```sendEventWithData:``` call:  
 
 ##### Objective-C
 
@@ -81,8 +79,7 @@ Button taps, other UI interactions and milestones passed are simple data points 
                            @"assoc_view" : @"store"
                            @"cart_value: : @"10.00"};
 
-    [TEALAudienceStream sendEvent:TEALEventTypeLink
-    					 withData:data];
+    [TealiumCollect sendEventWithData:data];
 }
 ```
 
@@ -96,7 +93,7 @@ Button taps, other UI interactions and milestones passed are simple data points 
                                   "assoc_view" : "store",
                                   "cart_value" : "10.00"]
 
-    TEALAudienceStream.sendEvent(TEALEventType.Link, withData: data)
+    TealiumCollect.sendEventWithData: data)
 }
 ```
 
