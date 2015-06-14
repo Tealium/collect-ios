@@ -5,7 +5,7 @@ subtitle: figure out what to track
 ---
 
 * [Views](trackable-actions.html#views)
-* [Links](trackable-actions.html#links)
+* [Events](trackable-actions.html#events)
 
 <hr/>
 
@@ -13,7 +13,7 @@ subtitle: figure out what to track
 
 ### <span id="views"/> Views
 
-Screen Views are some of the simplest and useful data to collect, track these with the following: 
+Screen Views are some of the simplest and useful data to collect, track these using the [sendViewWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendViewWithData:) method: 
 
 ##### Objective-C
 
@@ -59,15 +59,15 @@ override func viewDidDisappear(animated: Bool) {
                                   "view_action"  : "disappeared"]
 
     
-    TealiumCollect.sendViewWithData: data)
+    TealiumCollect.sendViewWithData(data)
 }
 ```
 
 Not only will this setup allow for view counts, but it also provides AudienceStream enough infomration to determine how much time is spent on every view. 
 
-### <span id="links"/> Links
+### <span id="events"/> Events
 
-Button taps, other UI interactions and milestones passed are simple data points that can be collected with the similar ```sendEventWithData:``` call:  
+Button taps, other UI interactions and milestones passed are simple data points that can be collected with the similar [sendEventWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendEventWithData:) method:  
 
 ##### Objective-C
 
@@ -93,7 +93,7 @@ Button taps, other UI interactions and milestones passed are simple data points 
                                   "assoc_view" : "store",
                                   "cart_value" : "10.00"]
 
-    TealiumCollect.sendEventWithData: data)
+    TealiumCollect.sendEventWithData(data)
 }
 ```
 

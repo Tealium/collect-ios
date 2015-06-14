@@ -67,7 +67,7 @@ In swift you'll need to Update your project's Objective-C bridging header or cre
 
 ### <span id="enable"/> Enable
 
-Enable the library with a configuration (```TEALCollectConfiguration```) instance in your appDelegate class:
+Enable the library with a configuration [TEALCollectConfiguration](documentation/html/Classes/TEALCollectConfiguration.html) instance in your appDelegate class:
 
 ##### Objective-C
 
@@ -103,7 +103,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 ### <span id="send-action-data"/> Send Action Data
 
-After determining what visitor behaviors should be tracked, utilize the ```sendEvent:withData``` method to send link or view events with relevant data to AudienceStream:
+After determining what visitor behaviors should be tracked, utilize the [sendEventWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendEventWithData:) method to send link or view events with relevant data to AudienceStream:
 
 ##### Objective-C
 
@@ -126,15 +126,15 @@ func sendLifecycleEventWithName(name: String) {
 }
 ```
 
-For more information see [Trackable Actions](trackable-actions.html)
+For more information see [Trackable Actions](trackable-actions.html) and [sendViewWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendViewWithData:) 
 
 ### <span id="fetch-visitor-profile"/> Fetch Visitor Profile
 
-The ```AudienceStream``` library offers a variety of means to identifiy visitor behavior and offer a personalized app experience via  Data layer enrichment.
+The ```TealiumCollect``` library offers a variety of means to identifiy visitor behavior and offer a personalized app experience via  Data layer enrichment from AudienceStream.
 
-Access the enriched Visitor Profile from AudienceStream using one of two methods:
+Access the enriched Visitor Profile ([TEALVisitorProfile](documentation/html/Classes/TEALVisitorProfile.html)) from the Collect ibrary using one of two methods:
 
-First access to the last profile the library received is always available via the ```cachedVisitorProfileCopy```  method:
+First access to the last profile the library received is always available via the [cachedVisitorProfileCopy](documentation/html/Classes/TealiumCollect.html#//api/name/cachedVisitorProfileCopy)  method:
 
 ##### Objective-C
 
@@ -164,7 +164,7 @@ func accessLastLoadedAudienceStreamProfile() {
 }
 ```
 
-Second to explicitly fetch a new copy of the user's current profile you can use the ```fetchVisitorProfileWithCompletion:``` method.  This will query the latest profile and pass the result to the completion block provided:
+Second to explicitly fetch a new copy of the user's current profile you can use the [fetchVisitorProfileWithCompletion:](documentation/html/Classes/TealiumCollect.html#//api/name/fetchVisitorProfileWithCompletion:) method.  This will query the latest profile and pass the result to the completion block provided:
 
 ##### Objective-C
 
@@ -198,3 +198,5 @@ func fetchAudienceStreamProfile() {
     }
 }
 ```
+
+For more information see the [TEALVisitorProfile](documentation/html/Classes/TEALVisitorProfile.html) class API documentatoin. 
