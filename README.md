@@ -1,6 +1,6 @@
 # Tealium Collect Library for iOS
 
-Collect is a Tealium library that leverages the power [AudienceStream](http://tealium.com/products/audiencestream/) natively in iOS.
+Collect is a Tealium library that leverages the power of [AudienceStream](http://tealium.com/products/audiencestream/) natively in iOS.
 
 ## How To Get Started
 
