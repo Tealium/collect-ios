@@ -74,10 +74,10 @@ Button taps, other UI interactions and milestones passed are simple data points 
 ```objective-c
 - (IBAction) buttonTapped:(id)sender {
 
-    NSDictionary *data = @{@"event_type" : @"button_tapped",
-                           @"event_name" : @"buy_button",
-                           @"assoc_view" : @"store"
-                           @"cart_value: : @"10.00"};
+    NSDictionary *data = @{@"event_type"  : @"button_tapped",
+                           @"event_name"  : @"buy_button",
+                           @"assoc_view"  : @"store",
+                           @"cart_value": : @"10.00"};
 
     [TealiumCollect sendEventWithData:data];
 }
