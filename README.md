@@ -2,9 +2,15 @@
 
 Collect is a Tealium library that leverages the power of [AudienceStream](http://tealium.com/products/audiencestream/) natively in iOS.
 
+## What is Audience Stream ?
+
+The [Tealium AudienceStream](http://tealium.com/resources/tealium-audiencestream/)™ Influence DMP (data management platform) enables you to build a universal 360-degree customer profile to better influence and engage visitors in your web or mobile channels in real time. AudienceStream leverages the richest source of real-time, first-party data to help you deliver more relevant and timely interactions, thereby improving loyalty and conversions and creating new opportunities for growth.
+
 ## How To Get Started
 
-The easist way to get started to walking through the steps outlined in the [Getting Started](http://tealium.github.io/collect-ios/getting-started.html) guide as well as the many other articles in the [documentation](http://tealium.github.io/collect-ios).
+* Check out the [Getting Started](http://tealium.github.io/collect-ios/getting-started.html) guide for a step by step walkthough of adding Collect or an extisting project.  
+* The public API can viewed online [here](http://tealium.github.io/collect-ios/documentation/html/), it is also provied in the [documentation directory](/tree/master/documentation) of this repo as html and docset for Xcode and Dash integration.
+* There are many other useful articles on the [documentation site](http://tealium.github.io/collect-ios).
 
 ## Communication
 
