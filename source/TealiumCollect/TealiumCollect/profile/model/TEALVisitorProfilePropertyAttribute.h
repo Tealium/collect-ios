@@ -15,6 +15,11 @@
 
 @interface TEALVisitorProfilePropertyAttribute : TEALVisitorProfileBaseAttribute <NSCoding, NSCopying>
 
-@property (copy, nonatomic) NSString *value;
+/**
+ *  String value of a given property or trait.
+ *
+ *  @return valid string or nil if none
+ */
+- (NSString *) value;
 
 @end

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/TEALSettingsStatus.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/TEALSettingsStatus</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TEALSettings.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALSettingsStatusNew</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALSettingsStatusNew</Declaration>
+            
+            <DeclaredIn>TEALSettings.h</DeclaredIn>
+            
+            <NodeRef refid="17"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALSettingsStatusLoadedRemote</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALSettingsStatusLoadedRemote</Declaration>
+            
+            <DeclaredIn>TEALSettings.h</DeclaredIn>
+            
+            <NodeRef refid="17"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALSettingsStatusLoadedArchive</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALSettingsStatusLoadedArchive</Declaration>
+            
+            <DeclaredIn>TEALSettings.h</DeclaredIn>
+            
+            <NodeRef refid="17"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALSettingsStatusInvalid</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALSettingsStatusInvalid</Declaration>
+            
+            <DeclaredIn>TEALSettings.h</DeclaredIn>
+            
+            <NodeRef refid="17"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

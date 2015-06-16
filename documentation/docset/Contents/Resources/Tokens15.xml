@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/TEALEventType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/TEALEventType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TEALEvent.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALEventTypeLink</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALEventTypeLink</Declaration>
+            
+            <DeclaredIn>TEALEvent.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALEventTypeView</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALEventTypeView</Declaration>
+            
+            <DeclaredIn>TEALEvent.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

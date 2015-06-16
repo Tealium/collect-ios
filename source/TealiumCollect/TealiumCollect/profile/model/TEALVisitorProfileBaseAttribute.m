@@ -10,6 +10,8 @@
 
 @interface TEALVisitorProfileBaseAttribute()
 
+@property (copy, nonatomic) NSString *attributeID;
+
 @property TEALVisitorProfileAttributeType type;
 
 @end

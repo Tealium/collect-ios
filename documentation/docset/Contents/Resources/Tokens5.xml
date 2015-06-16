@@ -1,87 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/TEALErrorCode.html">
+	<File path="Classes/TEALVisitorProfileBaseAttribute.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/TEALErrorCode</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/TEALVisitorProfileBaseAttribute</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>TEALError.h</DeclaredIn>
+			<DeclaredIn>TEALVisitorProfileBaseAttribute.h</DeclaredIn>
             
 			
 			<NodeRef refid="5"/>
 		</Token>
 		
 		
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeUnknown</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeUnknown</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBaseAttribute/setAttributeID:</TokenIdentifier>
+			<Abstract type="html">ID of the attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *attributeID</Declaration>
+			
+			<ReturnValue><Abstract type="html">string value of the attribute&apos;s ID</Abstract></ReturnValue>
+			<Anchor>//api/name/attributeID</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeSuccess</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeSuccess</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBaseAttribute/attributeID</TokenIdentifier>
+			<Abstract type="html">ID of the attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *attributeID</Declaration>
+			
+			<ReturnValue><Abstract type="html">string value of the attribute&apos;s ID</Abstract></ReturnValue>
+			<Anchor>//api/name/attributeID</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeNoContent</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeNoContent</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileBaseAttribute/attributeID</TokenIdentifier>
+			<Abstract type="html">ID of the attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *attributeID</Declaration>
+			
+			<ReturnValue><Abstract type="html">string value of the attribute&apos;s ID</Abstract></ReturnValue>
+			<Anchor>//api/name/attributeID</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeMalformed</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeMalformed</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBaseAttribute/setType:</TokenIdentifier>
+			<Abstract type="html">Type of attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) TEALVisitorProfileAttributeType type</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid TEALVisitorProfileAttributeType type</Abstract></ReturnValue>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeFailure</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeFailure</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBaseAttribute/type</TokenIdentifier>
+			<Abstract type="html">Type of attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) TEALVisitorProfileAttributeType type</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid TEALVisitorProfileAttributeType type</Abstract></ReturnValue>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeNotAcceptable</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeNotAcceptable</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileBaseAttribute/type</TokenIdentifier>
+			<Abstract type="html">Type of attribute</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) TEALVisitorProfileAttributeType type</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid TEALVisitorProfileAttributeType type</Abstract></ReturnValue>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="5"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeException</TokenIdentifier>
-            <Abstract type="html"></Abstract>
-            <Declaration>TEALErrorCodeException</Declaration>
-            
-            <DeclaredIn>TEALError.h</DeclaredIn>
-            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBaseAttribute/isEqualAttribute:</TokenIdentifier>
+			<Abstract type="html">Compares relavent properties of two attributes for equality</Abstract>
+			<DeclaredIn>TEALVisitorProfileBaseAttribute.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqualAttribute:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">Any NSObject, only TEALVisitorProfileBaseAttribute subclasses can return a true result.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">boolean of true if relavent values are equal, regardles of object hashing or non relavant properties.</Abstract></ReturnValue>
+			<Anchor>//api/name/isEqualAttribute:</Anchor>
             <NodeRef refid="5"/>
-        </Token>
+		</Token>
+		
         
         
 	</File>

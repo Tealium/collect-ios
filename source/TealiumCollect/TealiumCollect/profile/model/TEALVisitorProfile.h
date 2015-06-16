@@ -68,7 +68,12 @@
  */
 - (NSArray *) properties;
 
-@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit;
+/**
+ *  Current visit instance, similar to the TEALVisitorProfile but contains only attributes related to the users current visit.
+ *
+ *  @return Object representing the visitor profile's current visit with type TEALVisitorProfileCurrentVisit or nil if current visit has not yet been established.
+ */
+- (TEALVisitorProfileCurrentVisit *) currentVisit;
 
 
 /**

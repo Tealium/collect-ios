@@ -7,6 +7,13 @@
 //
 
 #import "TEALVisitorProfileAudienceAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+
+@interface TEALVisitorProfileAudienceAttribute ()
+
+@property (readwrite, copy, nonatomic) NSString *name;
+
+@end
 
 @implementation TEALVisitorProfileAudienceAttribute
 

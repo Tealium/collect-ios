@@ -12,6 +12,11 @@
 
 @interface TEALVisitorProfileFlagAttribute : TEALVisitorProfileBaseAttribute <NSCoding, NSCopying>
 
-@property (nonatomic) BOOL value;
+/**
+ *  Value of the Flag
+ *
+ *  @return booleon value of the flag
+ */
+- (BOOL) value;
 
 @end

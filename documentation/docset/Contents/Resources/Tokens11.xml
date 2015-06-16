@@ -1,7 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="">
+	<File path="Classes/TealiumCollect.html">
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TealiumCollect</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+            
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/enableWithConfiguration:</TokenIdentifier>
+			<Abstract type="html">Starts the Tealium Collect Library with the given configuration object.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)enableWithConfiguration:(TEALCollectConfiguration *)configuration</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>configuration</Name>
+					<Abstract type="html">TEALCollectConfiguration instance with valid Account/Profile/Enviroment properties.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/enableWithConfiguration:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/enableWithConfiguration:completion:</TokenIdentifier>
+			<Abstract type="html">Starts the Tealium Collect Library with the given configuration object.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)enableWithConfiguration:(TEALCollectConfiguration *)configuration completion:(TEALBooleanCompletionBlock)completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>configuration</Name>
+					<Abstract type="html">TEALCollectConfiguration instance with valid Account/Profile/Enviroment properties.</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">TEALBooleanCompletionBlock which is called after settings have loaded and visitorID has been created or restored.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/enableWithConfiguration:completion:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/disable</TokenIdentifier>
+			<Abstract type="html">Disabled the library from operating.  Sets the libraries internal state to disabled, all subsequent method calls with be ignored.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)disable</Declaration>
+			
+			
+			<Anchor>//api/name/disable</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/sendEventWithData:</TokenIdentifier>
+			<Abstract type="html">Sends an event to Collect.  Event are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)sendEventWithData:(NSDictionary *)customData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>customData</Name>
+					<Abstract type="html">Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sendEventWithData:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/sendViewWithData:</TokenIdentifier>
+			<Abstract type="html">Sends a view to Collect.  Views are packaged with any custom key/value data sources passed in along with the default datasources provided by the library.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)sendViewWithData:(NSDictionary *)customData</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>customData</Name>
+					<Abstract type="html">Dictionary of custom datasources (key/value pairs) to be included in the event dispatch.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sendViewWithData:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/fetchVisitorProfileWithCompletion:</TokenIdentifier>
+			<Abstract type="html">Retrieves the current visitor profile from AudienceStream.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)fetchVisitorProfileWithCompletion:(void ( ^ ) ( TEALVisitorProfile *profile , NSError *error ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">Completion block with retrieved TEALVisitorProfile instance and an error should any problems occur.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/fetchVisitorProfileWithCompletion:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/cachedVisitorProfileCopy</TokenIdentifier>
+			<Abstract type="html">Last retrieved profile instance.  This is updated every time the profile is queried.  Depending on the settings the library was enabled with, this could be after every sendEvent:customData: call or only on explicit request.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (TEALVisitorProfile *)cachedVisitorProfileCopy</Declaration>
+			
+			<ReturnValue><Abstract type="html">Returns valid TEALVisitorProfile object.  Its properties might be nil of nothing is loaded into them yet.</Abstract></ReturnValue>
+			<Anchor>//api/name/cachedVisitorProfileCopy</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/visitorID</TokenIdentifier>
+			<Abstract type="html">Unique visitor ID per Account / Device combination.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)visitorID</Declaration>
+			
+			<ReturnValue><Abstract type="html">String value of the visitorID for the Account the library was enabled with.</Abstract></ReturnValue>
+			<Anchor>//api/name/visitorID</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/joinTraceWithToken:</TokenIdentifier>
+			<Abstract type="html">Joins a trace initiated from the AudienceStream web app with a valid string token provide from the TraceUI</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)joinTraceWithToken:(NSString *)token</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>token</Name>
+					<Abstract type="html">String value should match the code provided via the AudienceStream web UI.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/joinTraceWithToken:</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TealiumCollect/leaveTrace</TokenIdentifier>
+			<Abstract type="html">Stops sending trace data for the provided token in the joinTraceWithToken: method.</Abstract>
+			<DeclaredIn>TealiumCollect.h</DeclaredIn>
+			
+			<Declaration>+ (void)leaveTrace</Declaration>
+			
+			
+			<Anchor>//api/name/leaveTrace</Anchor>
+            <NodeRef refid="11"/>
+		</Token>
 		
         
         

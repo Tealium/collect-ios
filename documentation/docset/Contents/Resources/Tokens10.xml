@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="">
+	<File path="Classes/TEALVisitorProfilePropertyAttribute.html">
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TEALVisitorProfilePropertyAttribute</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TEALVisitorProfilePropertyAttribute.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfilePropertyAttribute/setValue:</TokenIdentifier>
+			<Abstract type="html">String value of a given property or trait.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *value</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid string or nil if none</Abstract></ReturnValue>
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfilePropertyAttribute/value</TokenIdentifier>
+			<Abstract type="html">String value of a given property or trait.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *value</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid string or nil if none</Abstract></ReturnValue>
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfilePropertyAttribute/value</TokenIdentifier>
+			<Abstract type="html">String value of a given property or trait.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *value</Declaration>
+			
+			<ReturnValue><Abstract type="html">valid string or nil if none</Abstract></ReturnValue>
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
 		
         
         

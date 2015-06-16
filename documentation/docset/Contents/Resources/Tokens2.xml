@@ -109,6 +109,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfile/setCurrentVisit:</TokenIdentifier>
+			<Abstract type="html">Current visit instance, similar to the TEALVisitorProfile but contains only attributes related to the users current visit.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit</Declaration>
+			
+			<ReturnValue><Abstract type="html">Object representing the visitor profile&apos;s current visit with type TEALVisitorProfileCurrentVisit or nil if current visit has not yet been established.</Abstract></ReturnValue>
+			<Anchor>//api/name/currentVisit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfile/currentVisit</TokenIdentifier>
+			<Abstract type="html">Current visit instance, similar to the TEALVisitorProfile but contains only attributes related to the users current visit.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit</Declaration>
+			
+			<ReturnValue><Abstract type="html">Object representing the visitor profile&apos;s current visit with type TEALVisitorProfileCurrentVisit or nil if current visit has not yet been established.</Abstract></ReturnValue>
+			<Anchor>//api/name/currentVisit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfile/currentVisit</TokenIdentifier>
+			<Abstract type="html">Current visit instance, similar to the TEALVisitorProfile but contains only attributes related to the users current visit.</Abstract>
+			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			
+			<Declaration>@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit</Declaration>
+			
+			<ReturnValue><Abstract type="html">Object representing the visitor profile&apos;s current visit with type TEALVisitorProfileCurrentVisit or nil if current visit has not yet been established.</Abstract></ReturnValue>
+			<Anchor>//api/name/currentVisit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfile/rawProfile</TokenIdentifier>
 			<Abstract type="html">Raw profile returned from AudienceStream.  JSON object converted to valid native objects</Abstract>
 			<DeclaredIn>TEALVisitorProfile.h</DeclaredIn>

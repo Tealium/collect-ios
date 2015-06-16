@@ -10,13 +10,47 @@
 
 @interface TEALVisitorProfileCurrentVisit : NSObject <NSCoding, NSCopying>
 
-@property (readonly) NSTimeInterval creationTimestamp;
+/**
+ *  Time current visit was initiated
+ *
+ *  @return interval as unix timestamp
+ */
+-(NSTimeInterval) creationTimestamp;
 
-@property (readonly, nonatomic) NSArray *dates;
-@property (readonly, nonatomic) NSArray *flags;
-@property (readonly, nonatomic) NSArray *metrics;
-@property (readonly, nonatomic) NSArray *properties;
+/**
+ *  Dates this visitor's profile is associated with.
+ *
+ *  @return Array of TEALVisitorProfileDateAttribute objects or nil if none exist
+ */
+- (NSArray *) dates;
 
-@property (readonly) NSInteger totalEventCount;
+/**
+ *  Flags this visitor's profile is associated with.
+ *
+ *  @return Array of TEALVisitorProfileFlagAttribute objects or nil if none exist
+ */
+- (NSArray *) flags;
+
+/**
+ *  Metrics this visitor's profile is associated with.
+ *
+ *  @return Array of TEALVisitorProfileMetricAttribute objects or nil if none exist
+ */
+- (NSArray *) metrics;
+
+/**
+ *  Properties or "Traits" this visitor's profile is associated with.
+ *
+ *  @return Array of TEALVisitorProfilePropertyAttribute objects or nil if none exist
+ */
+- (NSArray *) properties;
+
+/**
+ *  Total number of events received during this current visit.
+ *
+ *  @return count as a signed integer
+ */
+- (NSInteger) totalEventCount;
+
 
 @end
