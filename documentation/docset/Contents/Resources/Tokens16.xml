@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/TEALNetworkStatus.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/TEALNetworkStatus</TokenIdentifier>
+			<Abstract type="html">Create NS_ENUM macro if it does not exist on the targeted version of iOS or OS X.</Abstract>
+			<DeclaredIn>TEALReachabilityManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALNetworkStatusNotReachable</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALNetworkStatusNotReachable</Declaration>
+            
+            <DeclaredIn>TEALReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALNetworkStatusReachableViaWiFi</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALNetworkStatusReachableViaWiFi</Declaration>
+            
+            <DeclaredIn>TEALReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALNetworkStatusReachableViaWWAN</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALNetworkStatusReachableViaWWAN</Declaration>
+            
+            <DeclaredIn>TEALReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="16"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>
