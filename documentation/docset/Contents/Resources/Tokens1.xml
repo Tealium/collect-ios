@@ -4,13 +4,317 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TEALCollectConfiguration</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Configuration Class for the Tealium Collect Library
+An instance of this is passed to TealiumCollect enableWithConfiguration: to start the Collect Library</Abstract>
 			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
             
 			
 			<NodeRef refid="1"/>
 		</Token>
 		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setAccountName:</TokenIdentifier>
+			<Abstract type="html">Tealium iQ account name</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *accountName</Declaration>
+			
+			
+			<Anchor>//api/name/accountName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/accountName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ account name</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *accountName</Declaration>
+			
+			
+			<Anchor>//api/name/accountName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/accountName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ account name</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *accountName</Declaration>
+			
+			
+			<Anchor>//api/name/accountName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setProfileName:</TokenIdentifier>
+			<Abstract type="html">Tealium iQ profile name, this should be the TiQ profile where the mobile publish settings have been configured for the collect library.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/audienceStreamProfile</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (copy, nonatomic) NSString *profileName</Declaration>
+			
+			
+			<Anchor>//api/name/profileName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/profileName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ profile name, this should be the TiQ profile where the mobile publish settings have been configured for the collect library.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/audienceStreamProfile</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (copy, nonatomic) NSString *profileName</Declaration>
+			
+			
+			<Anchor>//api/name/profileName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/profileName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ profile name, this should be the TiQ profile where the mobile publish settings have been configured for the collect library.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/audienceStreamProfile</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (copy, nonatomic) NSString *profileName</Declaration>
+			
+			
+			<Anchor>//api/name/profileName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setEnvironmentName:</TokenIdentifier>
+			<Abstract type="html">Tealium iQ evnvironment name.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *environmentName</Declaration>
+			
+			
+			<Anchor>//api/name/environmentName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/environmentName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ evnvironment name.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *environmentName</Declaration>
+			
+			
+			<Anchor>//api/name/environmentName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/environmentName</TokenIdentifier>
+			<Abstract type="html">Tealium iQ evnvironment name.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *environmentName</Declaration>
+			
+			
+			<Anchor>//api/name/environmentName</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setUseHTTP:</TokenIdentifier>
+			<Abstract type="html">Flag when on will send all data for HTTP.  Suggested to be used in development only!</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL useHTTP</Declaration>
+			
+			
+			<Anchor>//api/name/useHTTP</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/useHTTP</TokenIdentifier>
+			<Abstract type="html">Flag when on will send all data for HTTP.  Suggested to be used in development only!</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL useHTTP</Declaration>
+			
+			
+			<Anchor>//api/name/useHTTP</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/useHTTP</TokenIdentifier>
+			<Abstract type="html">Flag when on will send all data for HTTP.  Suggested to be used in development only!</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL useHTTP</Declaration>
+			
+			
+			<Anchor>//api/name/useHTTP</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setPollingFrequency:</TokenIdentifier>
+			<Abstract type="html">Frequency at which visitor profile should be polled.
+By default after each sendEventWithData: and sendViewWithData: call an updated visitor profile will be requested.
+If set to on request, the library will only requery the profile when asked for using fetchVisitorProfileWithCompletion:</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALVisitorProfilePollingFrequency</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALVisitorProfilePollingFrequency pollingFrequency</Declaration>
+			
+			
+			<Anchor>//api/name/pollingFrequency</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/pollingFrequency</TokenIdentifier>
+			<Abstract type="html">Frequency at which visitor profile should be polled.
+By default after each sendEventWithData: and sendViewWithData: call an updated visitor profile will be requested.
+If set to on request, the library will only requery the profile when asked for using fetchVisitorProfileWithCompletion:</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALVisitorProfilePollingFrequency</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALVisitorProfilePollingFrequency pollingFrequency</Declaration>
+			
+			
+			<Anchor>//api/name/pollingFrequency</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/pollingFrequency</TokenIdentifier>
+			<Abstract type="html">Frequency at which visitor profile should be polled.
+By default after each sendEventWithData: and sendViewWithData: call an updated visitor profile will be requested.
+If set to on request, the library will only requery the profile when asked for using fetchVisitorProfileWithCompletion:</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALVisitorProfilePollingFrequency</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALVisitorProfilePollingFrequency pollingFrequency</Declaration>
+			
+			
+			<Anchor>//api/name/pollingFrequency</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setLogLevel:</TokenIdentifier>
+			<Abstract type="html">How verbose the library&apos;s logs should be.  This defaults to showing nothing.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALCollectLogLevel</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALCollectLogLevel logLevel</Declaration>
+			
+			
+			<Anchor>//api/name/logLevel</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/logLevel</TokenIdentifier>
+			<Abstract type="html">How verbose the library&apos;s logs should be.  This defaults to showing nothing.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALCollectLogLevel</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALCollectLogLevel logLevel</Declaration>
+			
+			
+			<Anchor>//api/name/logLevel</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/logLevel</TokenIdentifier>
+			<Abstract type="html">How verbose the library&apos;s logs should be.  This defaults to showing nothing.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/c/tdef/TEALCollectLogLevel</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>@property (nonatomic) TEALCollectLogLevel logLevel</Declaration>
+			
+			
+			<Anchor>//api/name/logLevel</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/setAudienceStreamProfile:</TokenIdentifier>
+			<Abstract type="html">Profile name Collect should use to query AudienceStream with.  Usually this is the account&apos;s main profile, however if a different profile is desired that profile&apos;s name goes here.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *audienceStreamProfile</Declaration>
+			
+			
+			<Anchor>//api/name/audienceStreamProfile</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TEALCollectConfiguration/audienceStreamProfile</TokenIdentifier>
+			<Abstract type="html">Profile name Collect should use to query AudienceStream with.  Usually this is the account&apos;s main profile, however if a different profile is desired that profile&apos;s name goes here.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *audienceStreamProfile</Declaration>
+			
+			
+			<Anchor>//api/name/audienceStreamProfile</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TEALCollectConfiguration/audienceStreamProfile</TokenIdentifier>
+			<Abstract type="html">Profile name Collect should use to query AudienceStream with.  Usually this is the account&apos;s main profile, however if a different profile is desired that profile&apos;s name goes here.</Abstract>
+			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (copy, nonatomic) NSString *audienceStreamProfile</Declaration>
+			
+			
+			<Anchor>//api/name/audienceStreamProfile</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/TEALCollectConfiguration/configurationWithAccount:profile:environment:</TokenIdentifier>
