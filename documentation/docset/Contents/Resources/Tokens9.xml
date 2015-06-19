@@ -13,35 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileMetricAttribute/setValue:</TokenIdentifier>
-			<Abstract type="html">Value of the given Metric</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) float value</Declaration>
-			
-			<ReturnValue><Abstract type="html">float value of the metric, default is 0.0</Abstract></ReturnValue>
-			<Anchor>//api/name/value</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileMetricAttribute/value</TokenIdentifier>
 			<Abstract type="html">Value of the given Metric</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			<DeclaredIn>TEALVisitorProfileMetricAttribute.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic) float value</Declaration>
-			
-			<ReturnValue><Abstract type="html">float value of the metric, default is 0.0</Abstract></ReturnValue>
-			<Anchor>//api/name/value</Anchor>
-            <NodeRef refid="9"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileMetricAttribute/value</TokenIdentifier>
-			<Abstract type="html">Value of the given Metric</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) float value</Declaration>
+			<Declaration>- (float)value</Declaration>
 			
 			<ReturnValue><Abstract type="html">float value of the metric, default is 0.0</Abstract></ReturnValue>
 			<Anchor>//api/name/value</Anchor>

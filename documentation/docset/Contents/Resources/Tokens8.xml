@@ -13,35 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileFlagAttribute/setValue:</TokenIdentifier>
-			<Abstract type="html">Value of the Flag</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) BOOL value</Declaration>
-			
-			<ReturnValue><Abstract type="html">booleon value of the flag</Abstract></ReturnValue>
-			<Anchor>//api/name/value</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileFlagAttribute/value</TokenIdentifier>
 			<Abstract type="html">Value of the Flag</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			<DeclaredIn>TEALVisitorProfileFlagAttribute.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic) BOOL value</Declaration>
-			
-			<ReturnValue><Abstract type="html">booleon value of the flag</Abstract></ReturnValue>
-			<Anchor>//api/name/value</Anchor>
-            <NodeRef refid="8"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileFlagAttribute/value</TokenIdentifier>
-			<Abstract type="html">Value of the Flag</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) BOOL value</Declaration>
+			<Declaration>- (BOOL)value</Declaration>
 			
 			<ReturnValue><Abstract type="html">booleon value of the flag</Abstract></ReturnValue>
 			<Anchor>//api/name/value</Anchor>

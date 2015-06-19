@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/c/tdef/TEALCollectLogLevel</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Unsigned integer value that controls the level of logging will use during its lifecycle.</Abstract>
 			<DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
             
 			
@@ -15,7 +15,8 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/TEALCollectLogLevelNone</TokenIdentifier>
-            <Abstract type="html"></Abstract>
+            <Abstract type="html">Nothing is logged to the console, this is the default.
+     </Abstract>
             <Declaration>TEALCollectLogLevelNone</Declaration>
             
             <DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
@@ -25,7 +26,8 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/TEALCollectLogLevelNormal</TokenIdentifier>
-            <Abstract type="html"></Abstract>
+            <Abstract type="html">Normal is minimal informative feedback of events processed and requested task status
+     </Abstract>
             <Declaration>TEALCollectLogLevelNormal</Declaration>
             
             <DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
@@ -35,7 +37,8 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/TEALCollectLogLevelVerbose</TokenIdentifier>
-            <Abstract type="html"></Abstract>
+            <Abstract type="html">Verbose is a more verbose version of normal, expanded logs for each event.  Useful for debugging and verifing during development.
+     </Abstract>
             <Declaration>TEALCollectLogLevelVerbose</Declaration>
             
             <DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>
@@ -45,7 +48,8 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/TEALCollectLogLevelExtremeVerbosity</TokenIdentifier>
-            <Abstract type="html"></Abstract>
+            <Abstract type="html">Extremely Verbose will display everything from Verbose with more gross details such has the complete contents of NSURLRequests and their responses.
+     </Abstract>
             <Declaration>TEALCollectLogLevelExtremeVerbosity</Declaration>
             
             <DeclaredIn>TEALCollectConfiguration.h</DeclaredIn>

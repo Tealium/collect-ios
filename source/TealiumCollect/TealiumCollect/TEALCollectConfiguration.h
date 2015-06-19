@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, TEALVisitorProfilePollingFrequency){
  */
 typedef NS_ENUM(NSUInteger, TEALCollectLogLevel){
     /**
-     *  Nothing is logged to the concole, this is the default.
+     *  Nothing is logged to the console, this is the default.
      */
     TEALCollectLogLevelNone = 1,
     /**

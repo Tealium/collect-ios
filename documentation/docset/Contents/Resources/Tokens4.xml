@@ -13,35 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBadgeAttribute/setName:</TokenIdentifier>
-			<Abstract type="html">Name of the Audience, this is a display name, all attributes are refenerenced by their unique attributeID</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (copy, nonatomic) NSString *name</Declaration>
-			
-			<ReturnValue><Abstract type="html">string of the human friendly name or nil.</Abstract></ReturnValue>
-			<Anchor>//api/name/name</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileBadgeAttribute/name</TokenIdentifier>
 			<Abstract type="html">Name of the Audience, this is a display name, all attributes are refenerenced by their unique attributeID</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			<DeclaredIn>TEALVisitorProfileBadgeAttribute.h</DeclaredIn>
 			
-			<Declaration>@property (copy, nonatomic) NSString *name</Declaration>
-			
-			<ReturnValue><Abstract type="html">string of the human friendly name or nil.</Abstract></ReturnValue>
-			<Anchor>//api/name/name</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileBadgeAttribute/name</TokenIdentifier>
-			<Abstract type="html">Name of the Audience, this is a display name, all attributes are refenerenced by their unique attributeID</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (copy, nonatomic) NSString *name</Declaration>
+			<Declaration>- (NSString *)name</Declaration>
 			
 			<ReturnValue><Abstract type="html">string of the human friendly name or nil.</Abstract></ReturnValue>
 			<Anchor>//api/name/name</Anchor>

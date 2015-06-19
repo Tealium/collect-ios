@@ -5,5 +5,5 @@ Documentation was generated from header comments using the [appledoc project](ht
 The command used to generate this set was:
 
 ```
-appledoc --project-name TealiumCollect --project-company "Tealium" --company-id com.tealium --output ~/Documents/iOS/tealium/collect-ios/documentation  --search-undocumented-doc --keep-intermediate-files --ignore "*.m"  .
+appledoc --project-name TealiumCollect --project-company "Tealium" --company-id com.tealium --output ~/Documents/iOS/tealium/collect-ios/documentation  --search-undocumented-doc --keep-intermediate-files --merge-categories --create-html --create-docset --ignore "*.m"  .
 ```

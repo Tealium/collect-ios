@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Container object for attrubtes related a users current visit.  Similar to the TEALVisitorProfile but contains only attributes related to the users current visit.
+ */
 @interface TEALVisitorProfileCurrentVisit : NSObject <NSCoding, NSCopying>
 
 /**
