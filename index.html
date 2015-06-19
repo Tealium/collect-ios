@@ -3,15 +3,47 @@ layout: default
 title: Tealium Collect Library for iOS
 ---
 
-<p>
-    The <a href="http://tealium.com/resources/tealium-audiencestream/" target="_blank">Tealium AudienceStream</a>™ Influence DMP (data management platform) enables you to build a universal 360-degree customer profile to better influence and engage visitors in your web or mobile channels in real time. AudienceStream leverages the richest source of real-time, first-party data to help you deliver more relevant and timely interactions, thereby improving loyalty and conversions and creating new opportunities for growth.
-</p>
-<ul class="posts">
-{% for post in site.posts %}
-  <li>
-	  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>; {{ post.subtitle }}
-	  {{ post.excerpt }}
-  </li>
-{% endfor %}
-</ul>
-<p>Collect <a href="{{ site.baseurl }}/documentation/html/">API</a></p>
+<div class="content_container">
+
+	<div class="sidebar">
+		{% include post-sidebar.html %}
+	</div>
+
+	<h1>{{ site.name }}</h3>
+	<p>
+	Tealium Collect is a library that leverages the power AudienceStream natively in iOS enabling you to track actions such as screen views, button presses, etc...  Use this documentation to explore the capabilities of Tealium Collect and view code examples for impementing the library.  <a href="https://github.com/Tealium/collect-ios">Download the iOS code library</a> from Github and reference the <a href="{{ site.baseurl }}/documentation/html/">API documentation</a> as needed.
+	</p>
+
+	<hr>
+
+	<h2>Getting Started</h2>
+	<p>
+	The easist way to get started to walking through the steps outlined in the Getting Started guide as well as the many other articles in the documentation.
+	</p>
+
+	<ul class="post_list">
+	{% for post in site.posts %}
+		{% assign post_id = post.url | replace: '/' %}
+		{% assign post_id = post_id | replace: '.html' %}
+	  <li class="postID_{{ post_id }}">
+		  <a class="postIcon postID_{{ post_id }}" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+		  <span class="post_subtitle">{{ post.subtitle }}</span>
+		  <span class="post_excerpt">{{ post.excerpt }}</span>
+	  </li>
+	{% endfor %}
+	</ul>
+
+	<hr>
+
+	<h2>Getting Help</h2>
+	<p>
+		<ul>
+			<li>If you have <b>code questions</b> or have experienced <b>errors</b> please post an issue on the <a href="https://github.com/Tealium/collect-ios/issues">issues page</a> on Github.</li>
+			<li>If you have <b>general questions</b> or want to network with other users please visit the <a href="https://community.tealiumiq.com/">Tealium Learning Community</a>.</li>
+			<li>If you have <b>account specific questions</b> please contact your Tealium account manager.</li>
+		</ul>
+	</p>
+
+
+
+</div>

@@ -1,13 +1,19 @@
 <!doctype html>
+
+  {% assign page_id = page.url | replace: '/' %}
+  {% assign page_id = page_id | replace: '.html' %}           
+
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ page.title }}</title>
-
+    <title>{{ page.title }}{% if page_id != 'index' %} - Tealium Collect{% endif %}</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <link rel="stylesheet" href="stylesheets/pygments-github.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='stylesheets/display.css' />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,24 +22,38 @@
   <body>
     <div class="wrapper">
       <header>
-        <a href="{{ site.baseurl }}/"><h1>{{ site.name }}</h1></a>
-        <p></p>
+        <a href="{{ site.baseurl }}/" class="logo"></a>
 
-        <p class="view"><a href="https://github.com/Tealium/collect-ios">View the Project on GitHub <small>Tealium/collect-ios</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/Tealium/collect-ios/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Tealium/collect-ios/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Tealium/collect-ios">View On <strong>GitHub</strong></a></li>
+        <ul class="toggle_bar">
+          <li class="selected"><a href="../collect-ios/" class="apple">iOS</a></li>
+          <li><a href="../collect-android/" class="android">Android</a></li>
         </ul>
+
+
+        <ul class="navigation_bar">
+            <li class="postID_index {% if page_id == 'index' %}selected{% endif %}">
+              <a class="postIcon postID_index" href="{{ site.baseurl }}/" class="home">Home</a>
+            </li>
+
+          {% for post in site.posts %}
+
+            {% assign post_id = post.url | replace: '/' %}
+            {% assign post_id = post_id | replace: '.html' %}
+
+            <li class="postID_{{ post_id }} {% if page_id == post_id %}selected{% endif %}">
+              <a class="postIcon postID_{{ post_id }}" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+
       </header>
-      <section>
-          {{ content }}
-      </section>
+
+      <div class="main_content">
+        {{ content }}
+      </div>
+
       <footer>
-        <p>This project is maintained by <a href="https://github.com/Tealium">Tealium</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        {% include footer.html %}
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>

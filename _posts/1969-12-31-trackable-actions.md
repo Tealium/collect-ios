@@ -1,21 +1,27 @@
 ---
 layout: post
 title: Trackable Actions
-subtitle: figure out what to track
+subtitle: View code examples on how to track screen views and events such as buttion taps.
 ---
-
-* [Views](trackable-actions.html#views)
-* [Events](trackable-actions.html#events)
-
-<hr/>
-
 <!--more--> 
 
-### <span id="views"/> Views
+<div class="sidebar">
+  <div class="context_container pageNavigation_wrapper">
+    <span class="context_title">{{ page.title }}</span>
+    <ul class="pageNavigation">
+      <li><a href="trackable-actions.html#views">Views</a></li>
+      <li><a href="trackable-actions.html#events">Events</a></li>
+    </ul>
+  </div>
+  {% include post-sidebar.html %}
+</div>
+
+
+## <span id="views"/> Views
 
 Screen Views are some of the simplest and useful data to collect, track these using the [sendViewWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendViewWithData:) method: 
 
-##### Objective-C
+#### Objective-C
 
 ```objective-c
 - (void) viewDidAppear:(BOOL)animated {
@@ -38,7 +44,7 @@ Screen Views are some of the simplest and useful data to collect, track these us
     [TealiumCollect sendViewWithData:data];
 }
 ```
-##### Swift
+#### Swift
 
 ```swift
 override func viewDidAppear(animated: Bool) {
@@ -65,11 +71,11 @@ override func viewDidDisappear(animated: Bool) {
 
 Not only will this setup allow for view counts, but it also provides AudienceStream enough infomration to determine how much time is spent on every view. 
 
-### <span id="events"/> Events
+## <span id="events"/> Events
 
 Button taps, other UI interactions and milestones passed are simple data points that can be collected with the similar [sendEventWithData:](documentation/html/Classes/TealiumCollect.html#//api/name/sendEventWithData:) method:  
 
-##### Objective-C
+#### Objective-C
 
 ```objective-c
 - (IBAction) buttonTapped:(id)sender {
@@ -83,7 +89,7 @@ Button taps, other UI interactions and milestones passed are simple data points 
 }
 ```
 
-##### Swift
+#### Swift
 
 ```swift
 @IBAction func buttonTapped(sender: AnyObject) {
@@ -98,7 +104,7 @@ Button taps, other UI interactions and milestones passed are simple data points 
 ```
 
 
-### Don&apos;t forget some other user behaviors: 
+## Don&apos;t forget some other user behaviors: 
 
 * Geofencing
 * Beacons
