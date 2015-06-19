@@ -485,8 +485,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+					"../../release/**",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -512,8 +511,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+					"../../release/**",
 				);
 				INFOPLIST_FILE = CollectTestsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
