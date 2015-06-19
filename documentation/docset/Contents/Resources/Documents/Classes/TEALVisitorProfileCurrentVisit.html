@@ -43,6 +43,8 @@
 							<select id="jump-to">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 
 	
 	
@@ -52,25 +54,25 @@
 
 	
 	
-	<optgroup label="Properties">
+
+	
+
+	
+	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/creationTimestamp">creationTimestamp</option>
+		<option value="//api/name/creationTimestamp">- creationTimestamp</option>
 		
-		<option value="//api/name/dates">dates</option>
+		<option value="//api/name/dates">- dates</option>
 		
-		<option value="//api/name/flags">flags</option>
+		<option value="//api/name/flags">- flags</option>
 		
-		<option value="//api/name/metrics">metrics</option>
+		<option value="//api/name/metrics">- metrics</option>
 		
-		<option value="//api/name/properties">properties</option>
+		<option value="//api/name/properties">- properties</option>
 		
-		<option value="//api/name/totalEventCount">totalEventCount</option>
+		<option value="//api/name/totalEventCount">- totalEventCount</option>
 		
 	</optgroup>
-	
-
-	
-
 	
 	
 </select>
@@ -103,6 +105,14 @@
 					
 
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Container object for attrubtes related a users current visit.  Similar to the <a href="../Classes/TEALVisitorProfile.html">TEALVisitorProfile</a> but contains only attributes related to the users current visit.</p>
+					</div>
+					
+					
 
 					
 					
@@ -116,7 +126,7 @@
 						<div class="task-list">
 							<div class="section-method">
 	<a name="//api/name/creationTimestamp" title="creationTimestamp"></a>
-	<h3 class="method-title"><code><a href="#//api/name/creationTimestamp">&nbsp;&nbsp;creationTimestamp</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/creationTimestamp">&ndash;&nbsp;creationTimestamp</a></code>
 </h3>
 
 	<div class="method-info">
@@ -131,7 +141,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly) NSTimeInterval creationTimestamp</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSTimeInterval)creationTimestamp</code></div>
 
 		    
 			
@@ -167,7 +177,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/dates" title="dates"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dates">&nbsp;&nbsp;dates</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/dates">&ndash;&nbsp;dates</a></code>
 </h3>
 
 	<div class="method-info">
@@ -182,7 +192,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSArray *dates</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)dates</code></div>
 
 		    
 			
@@ -218,7 +228,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/flags" title="flags"></a>
-	<h3 class="method-title"><code><a href="#//api/name/flags">&nbsp;&nbsp;flags</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/flags">&ndash;&nbsp;flags</a></code>
 </h3>
 
 	<div class="method-info">
@@ -233,7 +243,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSArray *flags</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)flags</code></div>
 
 		    
 			
@@ -269,7 +279,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/metrics" title="metrics"></a>
-	<h3 class="method-title"><code><a href="#//api/name/metrics">&nbsp;&nbsp;metrics</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/metrics">&ndash;&nbsp;metrics</a></code>
 </h3>
 
 	<div class="method-info">
@@ -284,7 +294,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSArray *metrics</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)metrics</code></div>
 
 		    
 			
@@ -320,7 +330,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/properties" title="properties"></a>
-	<h3 class="method-title"><code><a href="#//api/name/properties">&nbsp;&nbsp;properties</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/properties">&ndash;&nbsp;properties</a></code>
 </h3>
 
 	<div class="method-info">
@@ -335,7 +345,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSArray *properties</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSArray *)properties</code></div>
 
 		    
 			
@@ -371,7 +381,7 @@
 	</div>
 </div><div class="section-method">
 	<a name="//api/name/totalEventCount" title="totalEventCount"></a>
-	<h3 class="method-title"><code><a href="#//api/name/totalEventCount">&nbsp;&nbsp;totalEventCount</a></code>
+	<h3 class="method-title"><code><a href="#//api/name/totalEventCount">&ndash;&nbsp;totalEventCount</a></code>
 </h3>
 
 	<div class="method-info">
@@ -386,7 +396,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (readonly) NSInteger totalEventCount</code></div>
+			<div class="method-subsection method-declaration"><code>- (NSInteger)totalEventCount</code></div>
 
 		    
 			
@@ -435,7 +445,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Tealium. All rights reserved. Updated: 2015-06-17</p>
+						<p class="copyright">Copyright &copy; 2015 Tealium. All rights reserved. Updated: 2015-06-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/TEALDispatchStatus.html">
+	<File path="Constants/TEALErrorCode.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/TEALDispatchStatus</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/c/tdef/TEALErrorCode</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>TEALDispatchConstants.h</DeclaredIn>
+			<DeclaredIn>TEALError.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -14,41 +14,71 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALDispatchStatusUnknown</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeUnknown</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>TEALDispatchStatusUnknown</Declaration>
+            <Declaration>TEALErrorCodeUnknown</Declaration>
             
-            <DeclaredIn>TEALDispatchConstants.h</DeclaredIn>
+            <DeclaredIn>TEALError.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALDispatchStatusSent</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeSuccess</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>TEALDispatchStatusSent</Declaration>
+            <Declaration>TEALErrorCodeSuccess</Declaration>
             
-            <DeclaredIn>TEALDispatchConstants.h</DeclaredIn>
+            <DeclaredIn>TEALError.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALDispatchStatusQueued</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeNoContent</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>TEALDispatchStatusQueued</Declaration>
+            <Declaration>TEALErrorCodeNoContent</Declaration>
             
-            <DeclaredIn>TEALDispatchConstants.h</DeclaredIn>
+            <DeclaredIn>TEALError.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/TEALDispatchStatusFailed</TokenIdentifier>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeMalformed</TokenIdentifier>
             <Abstract type="html"></Abstract>
-            <Declaration>TEALDispatchStatusFailed</Declaration>
+            <Declaration>TEALErrorCodeMalformed</Declaration>
             
-            <DeclaredIn>TEALDispatchConstants.h</DeclaredIn>
+            <DeclaredIn>TEALError.h</DeclaredIn>
+            
+            <NodeRef refid="13"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeFailure</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALErrorCodeFailure</Declaration>
+            
+            <DeclaredIn>TEALError.h</DeclaredIn>
+            
+            <NodeRef refid="13"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeNotAcceptable</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALErrorCodeNotAcceptable</Declaration>
+            
+            <DeclaredIn>TEALError.h</DeclaredIn>
+            
+            <NodeRef refid="13"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/TEALErrorCodeException</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>TEALErrorCodeException</Declaration>
+            
+            <DeclaredIn>TEALError.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>

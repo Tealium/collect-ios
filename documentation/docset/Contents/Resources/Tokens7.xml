@@ -13,35 +13,11 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileDateAttribute/setTimestamp:</TokenIdentifier>
-			<Abstract type="html">Date as Unix timestamp</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) NSTimeInterval timestamp</Declaration>
-			
-			<ReturnValue><Abstract type="html">time interval timetamp representation of a date</Abstract></ReturnValue>
-			<Anchor>//api/name/timestamp</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TEALVisitorProfileDateAttribute/timestamp</TokenIdentifier>
 			<Abstract type="html">Date as Unix timestamp</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
+			<DeclaredIn>TEALVisitorProfileDateAttribute.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic) NSTimeInterval timestamp</Declaration>
-			
-			<ReturnValue><Abstract type="html">time interval timetamp representation of a date</Abstract></ReturnValue>
-			<Anchor>//api/name/timestamp</Anchor>
-            <NodeRef refid="7"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/TEALVisitorProfileDateAttribute/timestamp</TokenIdentifier>
-			<Abstract type="html">Date as Unix timestamp</Abstract>
-			<DeclaredIn>TEALVisitorProfile+PrivateHeader.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) NSTimeInterval timestamp</Declaration>
+			<Declaration>- (NSTimeInterval)timestamp</Declaration>
 			
 			<ReturnValue><Abstract type="html">time interval timetamp representation of a date</Abstract></ReturnValue>
 			<Anchor>//api/name/timestamp</Anchor>

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TealiumCollect</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">TealiumCollect is the main class for the Tealium Collect Library.</Abstract>
 			<DeclaredIn>TealiumCollect.h</DeclaredIn>
             
 			
