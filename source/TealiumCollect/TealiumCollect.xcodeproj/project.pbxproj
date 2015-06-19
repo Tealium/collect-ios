@@ -174,7 +174,7 @@
 		37F1E18F1B263BAE0082F9CB /* TEALVisitorProfileMetricAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALVisitorProfileMetricAttribute.m; sourceTree = "<group>"; };
 		37F1E1921B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALVisitorProfilePropertyAttribute.h; sourceTree = "<group>"; };
 		37F1E1931B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALVisitorProfilePropertyAttribute.m; sourceTree = "<group>"; };
-		E72D18321B28D5D5006E24F2 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		E72D18321B28D5D5006E24F2 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,9 +669,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/tealium/collect-ios/release",
+					"../../release/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -687,9 +685,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/tealium/collect-ios/release",
+					"../../release/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
