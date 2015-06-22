@@ -12,7 +12,7 @@
 
 + (NSString *) tealiumIQlibraryVersion;
 
-+ (NSString *) audienceStreamLibraryVersion;
++ (NSString *) collectLibraryVersion;
 
 + (NSString *) mpsVersionNumber;
 

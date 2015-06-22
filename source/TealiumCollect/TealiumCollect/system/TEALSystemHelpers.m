@@ -14,17 +14,17 @@
 
 NSString * const kTEALApplicationUUIDKey = @"com.tealium.applicationUUID";
 
-NSString * const kTEALAudienceStreamVersion = @"1.0";
+NSString * const kTEALCollectLibraryVersion = @"1.0";
 
 
 @implementation TEALSystemHelpers
 
 + (NSString *) tealiumIQlibraryVersion {
-    return @"TiQ_4.1.2";
+    return @"tiq-4.1.2";
 }
 
-+ (NSString *) audienceStreamLibraryVersion {
-    return [@"AS_" stringByAppendingString:kTEALAudienceStreamVersion];
++ (NSString *) collectLibraryVersion {
+    return [@"collect-" stringByAppendingString:kTEALCollectLibraryVersion];
 }
 
 + (NSString *) mpsVersionNumber {

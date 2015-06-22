@@ -39,7 +39,7 @@ static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.
     self[TEALDatasourceKey_Pagetype]           = @"mobile_view";
     self[TEALDatasourceKey_Platform]           = @"iOS";
     self[TEALDatasourceKey_SystemVersion]      = [[UIDevice currentDevice] systemVersion];
-    self[TEALDatasourceKey_LibraryVersion]     = [TEALSystemHelpers audienceStreamLibraryVersion];
+    self[TEALDatasourceKey_LibraryVersion]     = [TEALSystemHelpers collectLibraryVersion];
     self[TEALDatasourceKey_ApplicationName]    = [TEALSystemHelpers applicationName];
 }
 
