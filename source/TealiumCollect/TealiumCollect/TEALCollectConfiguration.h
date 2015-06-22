@@ -19,13 +19,13 @@ typedef NS_ENUM(NSUInteger, TEALVisitorProfilePollingFrequency){
      */
     TEALVisitorProfilePollingFrequencyOnRequest = 1,
     /**
-     *  After every event, after each sendEventWithData: or sendViewWithData: call an updated visitor profile will be requested.
+     *  After each event (sendEventWithData: or sendViewWithData:) an updated visitor profile will be requested.
      */
     TEALVisitorProfilePollingFrequencyAfterEveryEvent
 };
 
 /**
- *  Unsigned integer value that controls the level of logging will use during its lifecycle.
+ *  Unsigned integer value that controls the verbosity level of any log output.
  */
 typedef NS_ENUM(NSUInteger, TEALCollectLogLevel){
     /**

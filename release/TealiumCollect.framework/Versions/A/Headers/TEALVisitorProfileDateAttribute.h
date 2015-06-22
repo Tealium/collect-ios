@@ -12,6 +12,11 @@
 
 @interface TEALVisitorProfileDateAttribute : TEALVisitorProfileBaseAttribute <NSCoding, NSCopying>
 
-@property (nonatomic) NSTimeInterval timestamp;
+/**
+ *  Date as Unix timestamp
+ *
+ *  @return time interval timetamp representation of a date
+ */
+- (NSTimeInterval) timestamp;
 
 @end

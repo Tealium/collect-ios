@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TEALVisitorProfileCurrentVisit</TokenIdentifier>
-			<Abstract type="html">Container object for attrubtes related a users current visit.  Similar to the TEALVisitorProfile but contains only attributes related to the users current visit.</Abstract>
+			<Abstract type="html">Container object for attrubtes related only to a users current visit.  Similar to the TEALVisitorProfile but contains only attributes related to the users current visit.</Abstract>
 			<DeclaredIn>TEALVisitorProfileCurrentVisit.h</DeclaredIn>
             
 			
@@ -77,9 +77,9 @@
 			<Abstract type="html">Total number of events received during this current visit.</Abstract>
 			<DeclaredIn>TEALVisitorProfileCurrentVisit.h</DeclaredIn>
 			
-			<Declaration>- (NSInteger)totalEventCount</Declaration>
+			<Declaration>- (NSUInteger)totalEventCount</Declaration>
 			
-			<ReturnValue><Abstract type="html">count as a signed integer</Abstract></ReturnValue>
+			<ReturnValue><Abstract type="html">count as an unsigned integer</Abstract></ReturnValue>
 			<Anchor>//api/name/totalEventCount</Anchor>
             <NodeRef refid="6"/>
 		</Token>

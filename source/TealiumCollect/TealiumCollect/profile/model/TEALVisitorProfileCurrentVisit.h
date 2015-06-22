@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  Container object for attrubtes related a users current visit.  Similar to the TEALVisitorProfile but contains only attributes related to the users current visit.
+ *  Container object for attrubtes related only to a users current visit.  Similar to the TEALVisitorProfile but contains only attributes related to the users current visit.
  */
 @interface TEALVisitorProfileCurrentVisit : NSObject <NSCoding, NSCopying>
 
@@ -51,9 +51,9 @@
 /**
  *  Total number of events received during this current visit.
  *
- *  @return count as a signed integer
+ *  @return count as an unsigned integer
  */
-- (NSInteger) totalEventCount;
+- (NSUInteger) totalEventCount;
 
 
 @end

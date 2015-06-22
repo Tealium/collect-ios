@@ -55,7 +55,7 @@
 @property (readwrite, nonatomic) NSArray *metrics;
 @property (readwrite, nonatomic) NSArray *properties;
 
-@property (readwrite) NSInteger totalEventCount;
+@property (readwrite) NSUInteger totalEventCount;
 
 @end
 

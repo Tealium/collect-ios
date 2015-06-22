@@ -26,7 +26,7 @@
         
         <Token>
             <TokenIdentifier>//apple_ref/c/econst/TEALVisitorProfilePollingFrequencyAfterEveryEvent</TokenIdentifier>
-            <Abstract type="html">After every event, after each sendEventWithData: or sendViewWithData: call an updated visitor profile will be requested.
+            <Abstract type="html">After each event (sendEventWithData: or sendViewWithData:) an updated visitor profile will be requested.
      </Abstract>
             <Declaration>TEALVisitorProfilePollingFrequencyAfterEveryEvent</Declaration>
             
