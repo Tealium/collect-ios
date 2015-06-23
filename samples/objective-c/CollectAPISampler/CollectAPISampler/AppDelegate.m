@@ -16,13 +16,13 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     TEALCollectConfiguration *config = [TEALCollectConfiguration configurationWithAccount:@"tealiummobile"
                                                                                   profile:@"demo"
                                                                               environment:@"dev"];
     
-    config.logLevel = TEALCollectLogLevelVerbose;
+    config.logLevel = TEALCollectLogLevelExtremeVerbosity;
 
     // If you only want profile enrichment on request.
     // By default the visitor profile is polled each Send Event/View.
@@ -30,7 +30,26 @@
     
     [TealiumCollect enableWithConfiguration:config];
     
+    [self sendLifecycleEventWithName:@"mobile_launch"];
+    
     return YES;
+}
+
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+    
+    [self sendLifecycleEventWithName:@"mobile_sleep"];
+}
+
+- (void) applicationWillEnterForeground:(UIApplication *)application {
+    
+    [self sendLifecycleEventWithName:@"mobile_wake"];
+}
+
+- (void) sendLifecycleEventWithName:(NSString *)name {
+
+    NSDictionary *data = @{ @"event_name" : name };
+    
+    [TealiumCollect sendEventWithData:data];
 }
 
 @end

@@ -79,7 +79,7 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
     
     switch (indexPath.row) {
         case CollectAPIMenuItemSendEvent:
-            [self sendCollectLink];
+            [self sendCollectEvent];
             break;
         case CollectAPIMenuItemSendView:
             [self sendCollectView];
@@ -95,17 +95,16 @@ typedef NS_ENUM(NSUInteger, CollectAPIMenuItem) {
     }
 }
 
-
 - (void) sendCollectView {
     
-    NSDictionary *data = @{ @"event_name" : @"m_view"};
+    NSDictionary *data = @{ @"custom_key" : @"custom_value"};
     
     [TealiumCollect sendViewWithData:data];
 }
 
-- (void) sendCollectLink {
+- (void) sendCollectEvent {
     
-    NSDictionary *data = @{ @"event_name" : @"m_link"};
+    NSDictionary *data = @{ @"custom_key" : @"custom_value"};
     
     [TealiumCollect sendEventWithData:data];
 }

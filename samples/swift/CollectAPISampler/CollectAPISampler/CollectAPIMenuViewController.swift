@@ -93,14 +93,14 @@ class CollectAPIMenuViewController: UITableViewController {
     
     func sendCollectView() {
         
-        let data: [String: String] = [ "event_name" : "m_view" ]
+        let data: [String: String] = [ "custom_key" : "custom_value" ]
         
         TealiumCollect.sendViewWithData(data)
     }
     
     func sendCollectEvent() {
 
-        let data: [String: String] = [ "event_name" : "m_link" ]
+        let data: [String: String] = [ "custom_key" : "custom_value" ]
 
         TealiumCollect.sendEventWithData(data)
     }
