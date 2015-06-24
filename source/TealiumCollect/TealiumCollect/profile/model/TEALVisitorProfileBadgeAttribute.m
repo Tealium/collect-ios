@@ -7,6 +7,13 @@
 //
 
 #import "TEALVisitorProfileBadgeAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+
+@interface TEALVisitorProfileBadgeAttribute ()
+
+@property (readwrite, copy, nonatomic) NSString *name;
+
+@end
 
 @implementation TEALVisitorProfileBadgeAttribute
 

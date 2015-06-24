@@ -12,6 +12,11 @@
 
 @interface TEALVisitorProfileMetricAttribute : TEALVisitorProfileBaseAttribute <NSCoding, NSCopying>
 
-@property (nonatomic) float value;
+/**
+ *  Value of the given Metric
+ *
+ *  @return float value of the metric, default is 0.0
+ */
+- (float) value;
 
 @end

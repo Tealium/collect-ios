@@ -8,26 +8,60 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, TEALVisitorProfileAttributeType) {
+/**
+ *  Type of Visitor Profile Attribute
+ */
+typedef NS_ENUM(NSInteger, TEALVisitorProfileAttributeType){
+    /**
+     *  Profile Audience
+     */
     TEALVisitorProfileAttributeTypeAudience,
+    /**
+     *  Profile Badge
+     */
     TEALVisitorProfileAttributeTypeBadge,
+    /**
+     *  Profile Date
+     */
     TEALVisitorProfileAttributeTypeDate,
+    /**
+     *  Profile Flag
+     */
     TEALVisitorProfileAttributeTypeFlag,
+    /**
+     *  Profile Metric
+     */
     TEALVisitorProfileAttributeTypeMetric,
+    /**
+     *  Profile Property or "Trait" in the AudienceStream App
+     */
     TEALVisitorProfileAttributeTypeProperty
 };
 
 @interface TEALVisitorProfileBaseAttribute : NSObject <NSCoding>
 
-@property (copy, nonatomic) NSString *attributeID;
-
-@property (readonly) TEALVisitorProfileAttributeType type;
-
-+ (instancetype) profileAttributeWithType:(TEALVisitorProfileAttributeType)type;
-
-- (instancetype) initWithType:(TEALVisitorProfileAttributeType)type;
-
+/**
+ *  Compares relavent properties of two attributes for equality
+ *
+ *  @param object Any NSObject, only TEALVisitorProfileBaseAttribute subclasses can return a true result.
+ *
+ *  @return boolean of true if relavent values are equal, regardles of object hashing or non relavant properties.
+ */
 - (BOOL) isEqualAttribute:(id)object;
+
+/**
+ *  ID of the attribute
+ *
+ *  @return string value of the attribute's ID
+ */
+- (NSString *) attributeID;
+
+/**
+ *  Type of attribute
+ *
+ *  @return valid TEALVisitorProfileAttributeType type
+ */
+- (TEALVisitorProfileAttributeType) type;
 
 @end
 

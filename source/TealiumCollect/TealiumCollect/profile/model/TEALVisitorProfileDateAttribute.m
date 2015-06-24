@@ -7,6 +7,13 @@
 //
 
 #import "TEALVisitorProfileDateAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+
+@interface TEALVisitorProfileDateAttribute ()
+
+@property (readwrite, nonatomic) NSTimeInterval timestamp;
+
+@end
 
 @implementation TEALVisitorProfileDateAttribute
 

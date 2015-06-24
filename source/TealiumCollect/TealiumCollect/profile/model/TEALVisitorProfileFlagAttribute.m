@@ -7,8 +7,15 @@
 //
 
 #import "TEALVisitorProfileFlagAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
 
 #import <TealiumUtilities/NSString+TealiumAdditions.h>
+
+@interface TEALVisitorProfileFlagAttribute ()
+
+@property (readwrite, nonatomic) BOOL value;
+
+@end
 
 @implementation TEALVisitorProfileFlagAttribute
 

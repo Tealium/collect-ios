@@ -7,7 +7,13 @@
 //
 
 #import "TEALVisitorProfilePropertyAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
 
+@interface TEALVisitorProfilePropertyAttribute ()
+
+@property (readwrite, copy, nonatomic) NSString *value;
+
+@end
 
 @implementation TEALVisitorProfilePropertyAttribute
 

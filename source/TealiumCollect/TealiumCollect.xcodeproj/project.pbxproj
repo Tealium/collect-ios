@@ -80,7 +80,7 @@
 		37F1E1911B263BAE0082F9CB /* TEALVisitorProfileMetricAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F1E18F1B263BAE0082F9CB /* TEALVisitorProfileMetricAttribute.m */; };
 		37F1E1941B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F1E1921B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37F1E1951B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F1E1931B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.m */; };
-		E7537B3E1B20FEC8009896E7 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7537B3D1B20FEC8009896E7 /* TealiumUtilities.framework */; };
+		E72D18331B28D5D5006E24F2 /* TealiumUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72D18321B28D5D5006E24F2 /* TealiumUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +174,7 @@
 		37F1E18F1B263BAE0082F9CB /* TEALVisitorProfileMetricAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALVisitorProfileMetricAttribute.m; sourceTree = "<group>"; };
 		37F1E1921B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEALVisitorProfilePropertyAttribute.h; sourceTree = "<group>"; };
 		37F1E1931B263C640082F9CB /* TEALVisitorProfilePropertyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEALVisitorProfilePropertyAttribute.m; sourceTree = "<group>"; };
-		E7537B3D1B20FEC8009896E7 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = "<group>"; };
+		E72D18321B28D5D5006E24F2 /* TealiumUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TealiumUtilities.framework; path = ../../release/TealiumUtilities.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7537B3E1B20FEC8009896E7 /* TealiumUtilities.framework in Frameworks */,
+				E72D18331B28D5D5006E24F2 /* TealiumUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +356,7 @@
 		370841D71B1F71540017A089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7537B3D1B20FEC8009896E7 /* TealiumUtilities.framework */,
+				E72D18321B28D5D5006E24F2 /* TealiumUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -669,8 +669,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+					"../../release/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -686,8 +685,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ethyreal/Documents/ios/tealium/collect-ios/release",
-					"/Users/georgewebster/Documents/iOS/collect-ios/release",
+					"../../release/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

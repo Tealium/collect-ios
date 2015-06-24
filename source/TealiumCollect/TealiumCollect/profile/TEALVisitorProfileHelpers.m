@@ -15,6 +15,8 @@
 #import "TEALVisitorProfileMetricAttribute.h"
 #import "TEALVisitorProfilePropertyAttribute.h"
 
+#import "TEALVisitorProfile+PrivateHeader.h"
+
 @implementation TEALVisitorProfileHelpers
 
 + (NSString *)keypathForAttributeType:(TEALVisitorProfileAttributeType)type {
@@ -97,6 +99,7 @@
         
         TEALVisitorProfileBadgeAttribute *attribute = [TEALVisitorProfileBadgeAttribute new];
         
+        attribute.attributeID = nil;
         attribute.attributeID = key;
         
         return attribute;

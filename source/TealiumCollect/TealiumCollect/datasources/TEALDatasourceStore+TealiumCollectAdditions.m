@@ -24,8 +24,10 @@ static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.
     NSString *storagekey = [kTEALAudienceStreamDatasourceStorageKey copy];
     if (![self unarchiveWithStorageKey:storagekey]) {
         
-        [self addDefaultDatasources];
+        [self addStaticDatasource];
     }
+    
+    [self addSystemDatasources];
     
     [TEALDatasourceStore sharedStore][TEALDatasourceKey_UUID] = [TEALSystemHelpers applicationUUIDWithKey:key];
     
@@ -33,13 +35,17 @@ static NSString * const kTEALAudienceStreamDatasourceStorageKey = @"com.tealium.
 }
 
 
-- (void) addDefaultDatasources {
+- (void) addStaticDatasource {
     
     self[TEALDatasourceKey_EventName]          = @"mobile_link";
     self[TEALDatasourceKey_Pagetype]           = @"mobile_view";
-    self[TEALDatasourceKey_Platform]           = @"iOS";
+    self[TEALDatasourceKey_Platform]           = @"ios";
+}
+
+- (void) addSystemDatasources {
+    
     self[TEALDatasourceKey_SystemVersion]      = [[UIDevice currentDevice] systemVersion];
-    self[TEALDatasourceKey_LibraryVersion]     = [TEALSystemHelpers audienceStreamLibraryVersion];
+    self[TEALDatasourceKey_LibraryVersion]     = [TEALSystemHelpers collectLibraryVersion];
     self[TEALDatasourceKey_ApplicationName]    = [TEALSystemHelpers applicationName];
 }
 

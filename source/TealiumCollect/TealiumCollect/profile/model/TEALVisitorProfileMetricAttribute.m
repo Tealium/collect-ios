@@ -7,6 +7,13 @@
 //
 
 #import "TEALVisitorProfileMetricAttribute.h"
+#import "TEALVisitorProfile+PrivateHeader.h"
+
+@interface TEALVisitorProfileMetricAttribute ()
+
+@property (readwrite, nonatomic) float value;
+
+@end
 
 @implementation TEALVisitorProfileMetricAttribute
 

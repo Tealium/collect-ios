@@ -252,7 +252,7 @@
     TEALVisitorProfileCurrentVisit *visit = [TEALVisitorProfileCurrentVisit new];
     
     
-    visit.totalEventCount = [source[@"total_event_count"] integerValue];
+    visit.totalEventCount = [source[@"total_event_count"] unsignedIntegerValue];
     visit.creationTimestamp = [source[@"creation_ts"] doubleValue];
     
     [self updateCurrentVisitAttributes:visit

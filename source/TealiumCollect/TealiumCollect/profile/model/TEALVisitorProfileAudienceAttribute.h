@@ -12,6 +12,11 @@
 
 @interface TEALVisitorProfileAudienceAttribute : TEALVisitorProfileBaseAttribute <NSCoding, NSCopying>
 
-@property (copy, nonatomic) NSString *name;
+/**
+ *  Name of the Audience, this is a display name, all attributes are refenerenced by their unique attributeID
+ *
+ *  @return string of the human friendly name or nil.
+ */
+- (NSString *) name;
 
 @end

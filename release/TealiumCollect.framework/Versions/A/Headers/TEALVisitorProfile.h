@@ -10,6 +10,12 @@
 
 #import "TEALVisitorProfileCurrentVisit.h"
 
+/**
+ *  This class represents a visitor profile retrieved from AudienceStream by the Collect library.
+ *
+ *  This is meant as a convenience to interact with a profile in a native, typed, safe manner.
+ *  To access the "raw" profile as was deserialized from the returned JSON use the rawProfile method.
+ */
 @interface TEALVisitorProfile : NSObject <NSCoding, NSCopying>
 
 /**
@@ -68,7 +74,12 @@
  */
 - (NSArray *) properties;
 
-@property (readonly, nonatomic) TEALVisitorProfileCurrentVisit *currentVisit;
+/**
+ *  Current visit instance, similar to the TEALVisitorProfile but contains only attributes related to the users current visit.
+ *
+ *  @return Object representing the visitor profile's current visit with type TEALVisitorProfileCurrentVisit or nil if current visit has not yet been established.
+ */
+- (TEALVisitorProfileCurrentVisit *) currentVisit;
 
 
 /**

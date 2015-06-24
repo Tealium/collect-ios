@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSArray *metrics;
 @property (strong, nonatomic) NSArray *properties;
 
-@property (readwrite) NSInteger totalEventCount;
+@property (readwrite) NSUInteger totalEventCount;
 
 @end
 
@@ -32,7 +32,10 @@
     self = [super init];
     
     if (self) {
-        _totalEventCount    = [aDecoder decodeIntegerForKey:@"totalEventCount"];
+        NSNumber *eventCount = [aDecoder decodeObjectForKey:@"totalEventCount"];
+        if (eventCount) {
+            _totalEventCount = [eventCount unsignedIntegerValue];
+        }
         _creationTimestamp  = [aDecoder decodeDoubleForKey:@"creationTimestamp"];
         _dates              = [aDecoder decodeObjectForKey:@"dates"];
         _flags              = [aDecoder decodeObjectForKey:@"flags"];
@@ -45,7 +48,8 @@
 
 - (void) encodeWithCoder:(NSCoder *)aCoder {
     
-    [aCoder encodeInteger:self.totalEventCount forKey:@"totalEventCount"];
+    NSNumber *eventCount = [NSNumber numberWithUnsignedInteger:self.totalEventCount];
+    [aCoder encodeObject:eventCount forKey:@"totalEventCount"];
     [aCoder encodeDouble:self.creationTimestamp forKey:@"creationTimestamp"];
     [aCoder encodeObject:self.dates forKey:@"dates"];
     [aCoder encodeObject:self.flags forKey:@"flags"];

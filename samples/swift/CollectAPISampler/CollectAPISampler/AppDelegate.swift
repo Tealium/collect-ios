@@ -26,33 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         TealiumCollect.enableWithConfiguration(configuration)
         
-        sendLifecycleEventWithName("m_launch")
+        sendLifecycleEventWithName("mobile_launch")
         
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-        
-    }
-    
     func applicationDidEnterBackground(application: UIApplication) {
         
-        sendLifecycleEventWithName("m_sleep")
+        sendLifecycleEventWithName("mobile_sleep")
     }
     
     func applicationWillEnterForeground(application: UIApplication) {
         
-        sendLifecycleEventWithName("m_wake")
+        sendLifecycleEventWithName("mobile_wake")
     }
-    
-    func applicationDidBecomeActive(application: UIApplication) {
-        
-    }
-    
-    func applicationWillTerminate(application: UIApplication) {
-        
-    }
-    
+
     func sendLifecycleEventWithName(name: String) {
         
         let data: [String: String] = ["event_name" : name]

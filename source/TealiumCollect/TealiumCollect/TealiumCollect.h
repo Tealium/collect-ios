@@ -5,7 +5,7 @@
 //  Created by George Webster on 1/8/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
-//  Version 0.5
+//  Version 1.0
 
 #import <Foundation/Foundation.h>
 
@@ -30,6 +30,15 @@
 
 #import <TealiumUtilities/TEALBlocks.h>
 
+/**
+ *  TealiumCollect is the main class for the Tealium Collect Library.  
+ *
+ *  This defines the public API for sending & receiving data through collect and by default audience stream
+ *
+ *  Currently it is entirely exposed via class methods.  This is done to allow flexabilitiy of changing the implementation.  Currently it is implemented using a singleton instance of the library and sending messages to it's instance methods.
+ *  Internally the entire library runs inside its own serial queue so there is no need call TealiumCollect methods from a background thread, it takes care of that on its own.
+ *
+ */
 @interface TealiumCollect : NSObject
 
 # pragma mark - Setup / Configuration
