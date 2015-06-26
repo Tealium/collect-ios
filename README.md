@@ -8,7 +8,7 @@ The [Tealium AudienceStream](http://tealium.com/resources/tealium-audiencestream
 
 ## How To Get Started
 
-* Check out the [Getting Started](http://tealium.github.io/collect-ios/getting-started.html) guide for a step by step walkthough of adding Collect or an extisting project.  
+* Check out the [Getting Started](http://tealium.github.io/collect-ios/getting-started.html) guide for a step by step walkthough of adding Collect to an extisting project.  
 * The public API can viewed online [here](http://tealium.github.io/collect-ios/documentation/html/), it is also provied in the [documentation directory](/tree/master/documentation) of this repo as html and docset for Xcode and Dash integration.
 * There are many other useful articles on the [documentation site](http://tealium.github.io/collect-ios).
 
