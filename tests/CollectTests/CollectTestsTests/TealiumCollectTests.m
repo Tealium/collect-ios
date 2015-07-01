@@ -31,15 +31,6 @@
     self.configuration = [TEALCollectConfiguration configurationWithAccount:@"tealiummobile"
                                                                     profile:@"demo"
                                                                 environment:@"dev"];
-    
-    __block BOOL isReady = NO;
-    
-    [self.collectLibrary setupConfiguration:self.configuration
-                                 completion:^(BOOL success, NSError *error) {
-                                     isReady = YES;
-                                 }];
-    while (CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, true) && !isReady){}
-    
 }
 
 - (void) tearDown {
@@ -52,7 +43,22 @@
 
 #pragma mark - Helpers
 
-- (void) enableWithSettings:(TEALSettings *)settings {
+- (void) enableLibraryWithConfiguration:(TEALCollectConfiguration *)config {
+    
+    if (!config) {
+        config = self.configuration;
+    }
+
+    __block BOOL isReady = NO;
+    
+    [self.collectLibrary setupConfiguration:config
+                                 completion:^(BOOL success, NSError *error) {
+                                     isReady = YES;
+                                 }];
+    while (CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0, true) && !isReady){}
+}
+
+- (void) fetchRemoteSettingsWithSettings:(TEALSettings *)settings {
     
     self.collectLibrary.enabled = YES;
     
@@ -70,10 +76,12 @@
 
 - (void) testSettingsStorage {
     
+    [self enableLibraryWithConfiguration:nil];
+    
     TEALSettings *settings = [self.collectLibrary.settingsStore settingsFromConfiguration:self.configuration
                                                                                 visitorID:@""];
     
-    [self enableWithSettings:settings];
+    [self fetchRemoteSettingsWithSettings:settings];
     
     XCTAssertTrue([self.collectLibrary.settingsStore.currentSettings isEqual:settings], @"saved settings should be same object passed in");
 }
@@ -84,9 +92,11 @@
                                                                                   profile:@"demo"
                                                                               environment:@"dev"];
     
+    [self enableLibraryWithConfiguration:config];
+    
     TEALSettings *settings = [self.collectLibrary.settingsStore settingsFromConfiguration:config visitorID:@""];
     
-    [self enableWithSettings:settings];
+    [self fetchRemoteSettingsWithSettings:settings];
     
     XCTAssertTrue(self.collectLibrary.settingsStore.currentSettings.status == TEALSettingsStatusInvalid, @"Stored status should be invalid");
     
@@ -94,14 +104,16 @@
 }
 
 - (void) testNoMobilePublishSettings {
-    
+
     TEALCollectConfiguration *config = [TEALCollectConfiguration configurationWithAccount:@"tealiummobile"
                                                                                   profile:@"ios-demo"
                                                                             environment:@"dev"];
-    
+
+    [self enableLibraryWithConfiguration:config];
+
     TEALSettings *settings = [self.collectLibrary.settingsStore settingsFromConfiguration:config visitorID:@""];
     
-    [self enableWithSettings:settings];
+    [self fetchRemoteSettingsWithSettings:settings];
     
     XCTAssertTrue(self.collectLibrary.settingsStore.currentSettings.status == TEALSettingsStatusInvalid, @"Stored status should be invalid");
     
@@ -112,9 +124,11 @@
 
 - (void) testTrace {
     
+    [self enableLibraryWithConfiguration:nil];
+
     TEALSettings *settings = [self.collectLibrary.settingsStore settingsFromConfiguration:self.configuration visitorID:@""];
     
-    [self enableWithSettings:settings];
+    [self fetchRemoteSettingsWithSettings:settings];
     
     NSString *token = @"A1B2C3";
     
@@ -139,9 +153,11 @@
 
 - (void) testDispatch {
     
+    [self enableLibraryWithConfiguration:nil];
+
     TEALSettings *settings = [self.collectLibrary.settingsStore settingsFromConfiguration:self.configuration visitorID:@""];
     
-    [self enableWithSettings:settings];
+    [self fetchRemoteSettingsWithSettings:settings];
     
     TEALDispatchBlock completion = ^(TEALDispatchStatus status, TEALDispatch *dispatch, NSError *error) {
         
