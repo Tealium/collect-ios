@@ -112,7 +112,7 @@ static NSString * const kTEALAudienceStreamSettingsStorageKey = @"com.tealium.au
         return;
     }
 
-    NSString *baseURL = [self.configuration mobilePublishSettingsURLStringForSettings:self.currentSettings];
+    NSString *baseURL = [self.configuration mobilePublishSettingsURLStringForSettings:settings];
     NSDictionary *params = [self.configuration mobilePublishSettingsURLParams];
 
     NSString *queryString = [TEALNetworkHelpers urlParamStringFromDictionary:params];

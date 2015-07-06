@@ -5,7 +5,7 @@
 //  Created by George Webster on 1/8/15.
 //  Copyright (c) 2015 Tealium Inc. All rights reserved.
 //
-//  Version 0.5
+//  Version 1.0
 
 #import <Foundation/Foundation.h>
 
