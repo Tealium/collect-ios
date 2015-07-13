@@ -48,7 +48,7 @@
 
 #import "TEALCollectAPIHelpers.h"
 
-@interface TealiumCollect () <TEALSettingsStoreConfiguration, TEALCollectDispatchManagerDelegate, TEALCollectDispatchManagerConfiguration>
+@interface TealiumCollect () <TEALSettingsStoreConfiguration, TEALCollectDispatchManagerDelegate, TEALCollectDispatchManagerConfiguration, TEALVisitorProfileStoreConfiguration>
 
 @property (strong, nonatomic) TEALSettingsStore *settingsStore;
 @property (strong, nonatomic) TEALCollectDispatchManager *dispatchManager;
@@ -103,7 +103,7 @@
         [_settingsStore unarchiveCurrentSettings];
         
         _dispatchManager    = [TEALCollectDispatchManager dispatchManagerWithConfiguration:self
-                                                                                         delegate:self];
+                                                                                  delegate:self];
     }
     
     return self;
@@ -144,28 +144,16 @@
     
     self.visitorID = visitorID;
     
+    self.profileStore = [[TEALVisitorProfileStore alloc] initWithConfiguration:self];  // needs valid visitorID
+
     TEALSettings *settings = [self.settingsStore settingsFromConfiguration:configuration visitorID:visitorID];
     
     [TEALLogger setLogLevel:settings.logLevel];
-    
-    [self setupProfileStoreWithSettings:settings];
     
     [self fetchSettings:settings
              completion:setupCompletion];
     
     [self setupSettingsReachabilitiyCallbacks];
-}
-
-- (void) setupProfileStoreWithSettings:(TEALSettings *) settings {
-    
-    NSString *visitorID = settings.visitorID;
-    NSURL *profileURL = [TEALCollectAPIHelpers profileURLFromSettings:settings];
-    NSURL *definitionURL = [TEALCollectAPIHelpers profileDefinitionsURLFromSettings:settings];
-    
-    self.profileStore= [[TEALVisitorProfileStore alloc] initWithURLSessionManager:self.urlSessionManager
-                                                                profileURL:profileURL
-                                                             definitionURL:definitionURL
-                                                                 visitorID:visitorID];
 }
 
 - (void) fetchSettings:(TEALSettings *)settings
@@ -470,6 +458,22 @@
         
         return instance.cachedProfile;
     }
+}
+
+#pragma mark - TEALVisitorProfileStoreConfiguration
+
+- (NSURL *) profileURL {
+    
+    TEALSettings *settings = self.settingsStore.currentSettings;
+
+    return [TEALCollectAPIHelpers profileURLFromSettings:settings];
+}
+
+- (NSURL *) profileDefinitionURL {
+    
+    TEALSettings *settings = self.settingsStore.currentSettings;
+    
+    return [TEALCollectAPIHelpers profileDefinitionsURLFromSettings:settings];
 }
 
 #pragma mark - Visitor ID

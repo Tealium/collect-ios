@@ -20,35 +20,38 @@
 
 @property (strong, nonatomic) TEALVisitorProfile *currentProfile;
 
-@property (strong, nonatomic) NSURL *profileURL;
-@property (strong, nonatomic) NSURL *profileDefinitionURL;
-
-@property (weak, nonatomic) TEALURLSessionManager *urlSessionManager;
-
 @end
 
 @implementation TEALVisitorProfileStore
 
-- (instancetype) initWithURLSessionManager:(TEALURLSessionManager *)urlSessionManager
-                                profileURL:(NSURL *)profileURL
-                             definitionURL:(NSURL *)definitionURL
-                                 visitorID:(NSString *)visitorID {
-
+- (instancetype) initWithConfiguration:(id<TEALVisitorProfileStoreConfiguration>)configuration {
+    
     self = [self init];
     
-    if (self) {
-        _profileURL             = profileURL;
-        _profileDefinitionURL   = definitionURL;
-        _urlSessionManager      = urlSessionManager;
-        _currentProfile         = [[TEALVisitorProfile alloc] initWithVisitorID:visitorID];
+    if (!self) {
+        return nil;
     }
+    
+    if (!configuration) {
+        return nil;
+    }
+
+    NSString *visitorID = [configuration visitorID];
+    
+    if (!visitorID) {
+        return nil;
+    }
+
+    _configuration = configuration;
+    
+    _currentProfile = [[TEALVisitorProfile alloc] initWithVisitorID:visitorID];
     
     return self;
 }
 
 - (void) fetchProfileWithCompletion:(TEALVisitorProfileCompletionBlock)completion {
 
-    if (!self.urlSessionManager || !self.profileURL) {
+    if (![self.configuration urlSessionManager] || ![self.configuration profileURL]) {
         NSError *error = [TEALError errorWithCode:TEALErrorCodeMalformed
                                       description:@"Profile request unsuccessful"
                                            reason:@"properties urlSessionManager: TEALURLSessionManager and/or profileURL: NSURL are missing"
@@ -59,20 +62,20 @@
         return;
     }
     
-    
-    NSURLRequest *request = [TEALNetworkHelpers requestWithURL:self.profileURL];
+    NSURL *profileURL = [self.configuration profileURL];
+    NSURLRequest *request = [TEALNetworkHelpers requestWithURL:profileURL];
     
     if (!request) {
         
         NSError *error = [TEALError errorWithCode:TEALErrorCodeMalformed
                                       description:@"Profile request unsuccessful"
-                                           reason:[NSString stringWithFormat:@"Failed to generate valid request from URL: %@", self.profileURL]
+                                           reason:[NSString stringWithFormat:@"Failed to generate valid request from URL: %@", profileURL]
                                        suggestion:@"Check the Account/Profile/Enviroment values in your configuration"];
         completion( nil, error ) ;
         return;
     }
     
-    if (![self.urlSessionManager.reachability isReachable]) {
+    if (![[self.configuration urlSessionManager].reachability isReachable]) {
         
         TEAL_LogVerbose(@"offline: %@", request);
         NSError *error = [TEALError errorWithCode:TEALErrorCodeFailure
@@ -86,27 +89,29 @@
     
     __weak TEALVisitorProfileStore *weakSelf = self;
     
-    [self.urlSessionManager performRequest:request
-                     withJSONCompletion:^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
-
-                         if (connectionError) {
-                             
-                             TEAL_LogVerbose(@"Profile Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
-                         }
-                         
-                         TEALVisitorProfile *profile = weakSelf.currentProfile;
-                         
-                         [weakSelf updateProfile:profile
-                                      fromSource:data];
-
-                         completion( weakSelf.currentProfile, connectionError);
-                     }];
+    TEALHTTPResponseJSONBlock urlCompletion = ^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
+        
+        if (connectionError) {
+            
+            TEAL_LogVerbose(@"Profile Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
+        }
+        
+        TEALVisitorProfile *profile = weakSelf.currentProfile;
+        
+        [weakSelf updateProfile:profile
+                     fromSource:data];
+        
+        completion( weakSelf.currentProfile, connectionError);
+    };
+    
+    [[self.configuration urlSessionManager] performRequest:request
+                                        withJSONCompletion:urlCompletion];
 }
 
 
 - (void) fetchProfileDefinitionsWithCompletion:(TEALDictionaryCompletionBlock)completion {
 
-    if (!self.urlSessionManager || !self.profileDefinitionURL) {
+    if (![self.configuration urlSessionManager] || ![self.configuration profileDefinitionURL]) {
         NSError *error = [TEALError errorWithCode:TEALErrorCodeMalformed
                                       description:@"Profile request unsuccessful"
                                            reason:@"properties urlSessionManager: TEALURLSessionManager and/or profileDefinitionURL: NSURL are missing"
@@ -117,28 +122,32 @@
         return;
     }
     
-    NSURLRequest *request = [TEALNetworkHelpers requestWithURL:self.profileDefinitionURL];
+    NSURL *profileDefinitionURL = [self.configuration profileDefinitionURL];
+
+    NSURLRequest *request = [TEALNetworkHelpers requestWithURL:profileDefinitionURL];
     
     if (!request) {
         
         NSError *error = [TEALError errorWithCode:TEALErrorCodeMalformed
                                       description:@"Profile request unsuccessful"
-                                           reason:[NSString stringWithFormat:@"Failed to generate valid request from URL: %@", self.profileDefinitionURL]
+                                           reason:[NSString stringWithFormat:@"Failed to generate valid request from URL: %@", profileDefinitionURL]
                                        suggestion:@"Check the Account/Profile/Enviroment values in your configuration"];
 
         completion( nil, error) ;
         return;
     }
 
-    [self.urlSessionManager performRequest:request
-                     withJSONCompletion:^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
-
-                         if (connectionError) {
-                             
-                             TEAL_LogVerbose(@"Profile Definitions Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
-                         }
-                         completion( data, connectionError);
-                     }];
+    TEALHTTPResponseJSONBlock urlCompletion = ^(NSHTTPURLResponse *response, NSDictionary *data, NSError *connectionError) {
+        
+        if (connectionError) {
+            
+            TEAL_LogVerbose(@"Profile Definitions Fetch Failed with response: %@, error: %@", response, [connectionError localizedDescription]);
+        }
+        completion( data, connectionError);
+    };
+    
+    [[self.configuration urlSessionManager] performRequest:request
+                                        withJSONCompletion:urlCompletion];
 }
 
 

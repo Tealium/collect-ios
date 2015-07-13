@@ -13,21 +13,24 @@
 
 #import "TEALVisitorProfileDelegate.h"
 
-@class TEALURLSessionManager;
+#import "TEALSystemProtocols.h"
+
+@protocol TEALVisitorProfileStoreConfiguration <NSObject, TEALURLSessions>
+
+- (NSURL *) profileURL;
+- (NSURL *) profileDefinitionURL;
+
+- (NSString *) visitorID;
+@end
 
 @interface TEALVisitorProfileStore : NSObject
 
 @property (readonly, nonatomic) TEALVisitorProfile *currentProfile;
-
-@property (readonly, nonatomic) NSURL *profileURL;
-@property (readonly, nonatomic) NSURL *profileDefinitionURL;
+@property (weak, nonatomic) id<TEALVisitorProfileStoreConfiguration> configuration;
 
 @property (weak, nonatomic) id<TEALVisitorProfileDelegate> profileDelegate;
 
-- (instancetype) initWithURLSessionManager:(TEALURLSessionManager *)urlSessionManager
-                                profileURL:(NSURL *)profileURL
-                             definitionURL:(NSURL *)definitionURL
-                                 visitorID:(NSString *)visitorID;
+- (instancetype) initWithConfiguration:(id<TEALVisitorProfileStoreConfiguration>)configuration;
 
 - (void) fetchProfileWithCompletion:(TEALVisitorProfileCompletionBlock)completion;
 
