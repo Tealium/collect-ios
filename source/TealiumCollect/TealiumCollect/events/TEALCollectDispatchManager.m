@@ -67,16 +67,10 @@ static NSString * const AudienceStream_IOQueueKey = @"com.tealium.audience_strea
         [combined addEntriesFromDictionary:userInfo];
         datasources = combined;
     }
-
-    NSString *datasourcePayload = [TEALNetworkHelpers urlParamStringFromDictionary:datasources];
-    
-    NSString *userPayload = [TEALNetworkHelpers urlParamStringFromDictionary:userInfo];
-
-    NSString *payload = [datasourcePayload stringByAppendingFormat:@"&%@", userPayload];
     
     TEALDispatch *dispatch = [TEALDispatch new];
     
-    dispatch.payload    = payload;
+    dispatch.payload    = [TEALNetworkHelpers urlParamStringFromDictionary:datasources];
     dispatch.timestamp  = [[NSDate date] timeIntervalSince1970];
     
     return dispatch;
