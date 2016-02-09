@@ -1,5 +1,9 @@
 # Tealium Collect Library for iOS
 
+**********************
+This library has been replaced by version 5.x [iOS](https://github.com/tealium/tealium-ios) and [tvOS](https://github.com/tealium/tealium-tvos) repositories. This version can still be used with Tealium services but no further development or bug fixes planned.
+**********************
+
 Collect is a Tealium library that leverages the power of [AudienceStream](http://tealium.com/products/audiencestream/) natively in iOS.
 
 ## What is Audience Stream ?
